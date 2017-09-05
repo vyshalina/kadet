@@ -557,6 +557,8 @@ article.img {
         left: 0;
         bottom: 0;
         padding: 13px 20px 30px 20px;
+        width: 332px;
+        height: 35px;
         background: -webkit-linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%);
         background: linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%); }
         .preview-wrapp .iteam .preview-title p {
