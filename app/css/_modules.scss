@@ -1,0 +1,414 @@
+/*********************************/
+/********** Typography ***********/
+/*********************************/
+h1, h2, h3, h4, h5, h6 {
+	font-family: $Intro;
+}
+p {
+	@include font-type($FedraSansPBk, 14px, 29px, 1px); color: #666;
+}
+
+h2 {
+	&.two-color {
+		@include font-type($Intro, 36px, 47px, 0.7px); color: #262626; text-transform: uppercase;
+		margin: 100px 0 35px 0; position: relative;
+		&:before {
+			content: '';
+			width: 360px; height: 1px; position: absolute; left: -460px; top: 25px; z-index: 11; 
+			background: #e6e6e6;
+		}
+		&:after {
+			content: '';
+			width: 745px; height: 1px; position: absolute; right: -560px; z-index: 11; top: 25px;
+			background: #e6e6e6;
+		}
+		span {
+			color: #df1722;
+		}
+	}
+}
+
+
+
+/*********************************/
+/*********** Buttons *************/
+/*********************************/
+
+
+
+
+
+/*********************************/
+/******** Class Helpers **********/
+/*********************************/
+.icon {
+	display: inline-block;
+}
+
+/*********************************/
+/*********** Corousel *************/
+/*********************************/
+
+.carousel {
+	width: 1497px; height: 720px; margin: 50px auto; padding-top: 140px; position: relative;
+	background: url(../img/coruesel-bg.jpg) no-repeat; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
+
+ 	&-head {
+ 		color: #fff;
+ 		display: flex; justify-content: space-between; width: 1175px; margin: 0 auto 40px auto;
+
+ 		h3 {
+			@include font-type($Intro, 36px, 50px, 0.8px); text-transform: uppercase;	
+		}
+		span {
+			@include font-type($FedraSansPB, 14px, 18px, 0.8px);
+			position: relative; height: 30px;
+			
+			&:after {
+				content: '';
+				position: absolute; bottom: 0px; left: 0;  width: 40px; height: 2px;
+				background: #df1722;
+			}
+
+			a {color: #df1722;}
+		}
+ 	}
+	
+
+	.nav {
+		&-prev, &-next {
+			width: 120px; height: 100%; display: block; position: absolute; top: 0;
+			background: rgba(102,102,102,0.42);
+
+			i {position: absolute; top: 50%; margin-top: -20px; left: 50%; margin-left: -15px;}
+		}
+		&-prev {
+			left: 0;
+		}
+		&-next {
+			right: 0;
+
+			i {transform: rotate(180deg);}
+		}
+	}
+
+	&-body {
+		width: 100%; overflow: hidden;
+		
+		&-wrapp {
+			width: 10000px; margin-left: -545px;
+
+			& > div {
+				float: left; margin-right: 35px;
+			}
+		}
+
+	}
+}
+
+/*********************************/
+/*********** Modules *************/
+/*********************************/
+
+//DARK DESIGN
+.app.dark {
+	h2 {
+		&.two-color {
+			text-transform: none; font-family: $KuraleR; font-weight: 800;
+			span {
+				color: #700301;
+			}
+		}
+	}
+	
+	.header {
+		h1 {
+			font-family: $KuraleR;
+		}
+		&-left {
+			float: left;
+			width: 700px; height: 100%; position: relative;
+			background: linear-gradient(45deg, rgba(59,1,0,0.89) 0%,rgba(47,1,0,0.89) 100%); 
+			
+			.epaulet {
+				width: 250px; height: 563px;
+				background: url('../img/epaulet-dark.png') no-repeat;
+			}
+		}
+	}
+
+	.header-main {
+		h1 {
+			font-family: $KuraleR;
+		}
+	}
+
+	.content {
+		h3 {
+			border-color: #700301;
+		}
+	}
+
+	.carousel {
+
+	 	&-head {
+
+	 		h3 {
+				font-family: $KuraleR;	
+			}
+			span {
+				@include font-type($FedraSansPB, 14px, 18px, 0.8px);
+				position: relative; height: 30px;
+				
+				&:after {
+					background: #fff;
+				}
+
+				a {color: #676767;}
+			}
+	 	}
+	}
+
+	.mark-text {
+		border-color: #700301;
+	}
+	article {
+		&.img {
+			h4, figcaption {
+				text-transform: none; font-family: $KuraleR;
+			}
+		}
+	}		
+	.footer {
+		&-preview {
+			&-cont {
+				&.red-bg {
+					background: linear-gradient(45deg, rgba(59,1,0,0.89) 0%,rgba(47,1,0,0.89) 100%); 
+				}
+				p {
+					font-family: $KuraleR;
+				}
+			}
+		}
+	}
+
+	.preview {
+		&-row {
+
+			.iteam {
+				
+
+				.preview-title {
+
+					background: linear-gradient(45deg, rgba(59,1,0,0.89) 0%,rgba(47,1,0,0.89) 100%); 
+					
+					p {
+						font-family: $KuraleR;
+					}
+				}
+			}
+			
+			.preview-nav {
+				a {
+					font-family: $KuraleR; text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+//////////////////////////////////////////
+
+//HEADER-INDEX
+.header {
+	width: 100%; height: 857px; position: relative;
+	background: url('../img/header-bg.jpg') no-repeat;
+	.blackout {
+		position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 0;
+		background: rgba(0,0,0,0.5);
+	}
+	h1 {
+		@include font-type($Intro, 48px, 50px, 1.7px); color: #fff; font-weight: 600;
+		width: 1290px; position: absolute; top: 375px; left: 370px;  z-index: 10; 
+		&:after {
+			content: ' ';
+			position: absolute; height: 5px; width: 120px; left: 4px; bottom: -40px;
+			background: #fff;
+		}
+	}
+	&-left {
+		float: left;
+		width: 700px; height: 100%; position: relative;
+		background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
+
+		.epaulet {
+			width: 255px; height: 571px; padding: 50px 0 0 85px;
+			background: url('../img/epaulet.png') no-repeat;
+
+			.logo {
+				&.fixed {
+					position: fixed; top: 50px; left: 85px; z-index: 500;
+				}
+			}
+		}
+	}
+	&-right {
+		text-align: center;
+		position: fixed; right: 0; top: 0; width: 230px; height: 496px; padding-top: 361px; z-index: 400;
+		background: rgba(102, 102, 102, 0.42);
+
+		.return {
+			color: #fff; @include font-type($FedraSansPD, 14px, 21px, 0.7px); text-transform: uppercase;
+			width: 100%; display: block;
+			i {
+				display: block; margin: 0 0 18px 87px;
+			}
+		}
+	}
+
+}
+
+//HEADER-MAIN
+.header-main {
+	display: flex; align-items: center; padding: 55px 0 25px 85px;
+
+	h1 {
+		font-size: 36px; letter-spacing: 0.5px; text-transform: uppercase;
+		margin-left: 40px;
+	}
+}
+
+.content {
+	p {
+		width: 830px;
+	}
+	h3 {
+		@include font-type($FedraSansPD, 14px, 21px, 0.7px); text-transform: uppercase;
+		padding-bottom: 20px; display: inline-block; margin: 22px 0;
+		border-bottom: 2px solid #d22c32;
+	}
+}
+
+.mark-text {
+	width: 880px; padding: 30px; margin: 45px auto;
+	border: 3px solid #e13039;
+	p {
+		color: #262626; text-transform: uppercase; font-size: 12px; font-family: $FedraSansPM;
+		width: auto; margin-bottom: 0;
+	}
+}
+
+article {
+	&.img {
+		margin: 60px 0; display: flex;
+		h4, figcaption {
+			@include font-type($Intro, 24px, 30px, 0); text-transform: uppercase; font-weight: 600;
+			position: relative; display: inline-block; margin-bottom: 20px;
+			/*&:after {
+				content: '';
+				position: absolute; width: 20px; height: 7px; right: -30px; top: 20px;
+				background: #d42c33;
+			}*/
+		}
+		p {
+			width: auto;
+		}
+		&.one {
+			padding-left: 100px;
+			figure {
+				margin-right: 30px;
+			}
+			section {
+				p {
+
+				}
+			}
+		}
+		&.several {
+			display: flex; flex-direction: column;
+			.images { 
+				display: flex; justify-content: center; align-items: flex-end;
+				figure {
+					text-align: left; margin: 0 60px;
+					img {
+						width: auto;
+					}
+					figcaption {
+						display: block;
+					}
+				}
+			}
+			
+			p {
+				clear: both;
+			}
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	&-preview {
+		position: relative;
+		&-cont {
+			position: absolute; left: 0; bottom: 0; padding: 35px 70px; width: calc(100% - 140px);
+			p {
+				@include font-type($FedraSansPD, 14px, 24px, 0.7px); text-transform: uppercase; color: #fff;
+				width: 400px; margin-bottom: 0; position: relative;
+				&:after {
+					content: '';
+					position: absolute; display: block; width: 50px; height: 2px; bottom: -12px; left: 2;
+					background: #fff;
+				}
+			}
+			&.red-bg {
+				background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
+			}
+		}
+	}
+}
+
+// PREVIEW PAGES
+.preview {
+	&-row {
+		display: flex; width: calc(100% - 20px); margin: 40px 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.iteam {
+			margin-right: 20px; position: relative;
+			
+			.blackout {
+				position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 0;
+				background: rgba(0,0,0,0.5);
+			}
+
+			.preview-title {
+
+				position: absolute; left: 0; bottom: 0; padding: 13px 20px 30px 20px;
+				background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
+				
+				p {
+					@include font-type($FedraSansPD, 11px, 18px, 0.5px); color: #fff; text-transform: uppercase;
+					margin-bottom: 0; position: relative;
+
+					&:after {
+						content: '';
+						width:55px; height: 2px; position: absolute;
+						background: #fff;
+						left: 0; bottom: -10px;
+					}
+				}
+			}
+		}
+
+		.preview-nav {
+			display: flex; align-items: center; width: 50%;
+
+			a {
+				@include font-type($Intro, 36px, 42px, 0); color: #262626; font-weight: 600;
+				margin-right: 32px; margin-left: 215px;
+			}
+		}
+	}
+}

@@ -1,0 +1,764 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Определяем шрифты */
+body {
+  /* устанавливаем оптимальный вертикальный ритм */
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  /* сглаживание шрифтов в вебките */
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased; }
+  body.onload {
+    overflow: hidden; }
+
+/* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */
+p {
+  margin-bottom: 20px;
+  /* для правильного вертикального ритма */ }
+
+a {
+  text-decoration: none; }
+  a:hover, a:focus, a:active {
+    text-decoration: none; }
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle; }
+
+form input,
+form select,
+form textarea {
+  -webkit-appearance: none;
+  text-overflow: ellipsis;
+  outline: none; }
+  form input:focus, form input:active,
+  form select:focus,
+  form select:active,
+  form textarea:focus,
+  form textarea:active {
+    text-overflow: ellipsis; }
+
+form textarea {
+  resize: vertical; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* выделение текста */
+::-moz-selection {
+  background: red;
+  text-shadow: none; }
+
+::selection {
+  background: red;
+  text-shadow: none; }
+
+/***********************/
+/******** Colors *******/
+/***********************/
+/***********************/
+/******** Fonts ********/
+/***********************/
+/*********************************/
+/********** Typography ***********/
+/*********************************/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Intro", sans-serif; }
+
+p {
+  font-family: "FedraSansPro-Book", sans-serif;
+  font-size: 14px;
+  line-height: 29px;
+  letter-spacing: 1px;
+  color: #666; }
+
+h2.two-color {
+  font-family: "Intro", sans-serif;
+  font-size: 36px;
+  line-height: 47px;
+  letter-spacing: 0.7px;
+  color: #262626;
+  text-transform: uppercase;
+  margin: 100px 0 35px 0;
+  position: relative; }
+  h2.two-color:before {
+    content: '';
+    width: 360px;
+    height: 1px;
+    position: absolute;
+    left: -460px;
+    top: 25px;
+    z-index: 11;
+    background: #e6e6e6; }
+  h2.two-color:after {
+    content: '';
+    width: 745px;
+    height: 1px;
+    position: absolute;
+    right: -560px;
+    z-index: 11;
+    top: 25px;
+    background: #e6e6e6; }
+  h2.two-color span {
+    color: #df1722; }
+
+/*********************************/
+/*********** Buttons *************/
+/*********************************/
+/*********************************/
+/******** Class Helpers **********/
+/*********************************/
+.icon {
+  display: inline-block; }
+
+/*********************************/
+/*********** Corousel *************/
+/*********************************/
+.carousel {
+  width: 1497px;
+  height: 720px;
+  margin: 50px auto;
+  padding-top: 140px;
+  position: relative;
+  background: url(../img/coruesel-bg.jpg) no-repeat;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5); }
+  .carousel-head {
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 1175px;
+    margin: 0 auto 40px auto; }
+    .carousel-head h3 {
+      font-family: "Intro", sans-serif;
+      font-size: 36px;
+      line-height: 50px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase; }
+    .carousel-head span {
+      font-family: "FedraSansPro-Bold", sans-serif;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.8px;
+      position: relative;
+      height: 30px; }
+      .carousel-head span:after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: #df1722; }
+      .carousel-head span a {
+        color: #df1722; }
+  .carousel .nav-prev, .carousel .nav-next {
+    width: 120px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    background: rgba(102, 102, 102, 0.42); }
+    .carousel .nav-prev i, .carousel .nav-next i {
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
+      left: 50%;
+      margin-left: -15px; }
+  .carousel .nav-prev {
+    left: 0; }
+  .carousel .nav-next {
+    right: 0; }
+    .carousel .nav-next i {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
+  .carousel-body {
+    width: 100%;
+    overflow: hidden; }
+    .carousel-body-wrapp {
+      width: 10000px;
+      margin-left: -545px; }
+      .carousel-body-wrapp > div {
+        float: left;
+        margin-right: 35px; }
+
+/*********************************/
+/*********** Modules *************/
+/*********************************/
+.app.dark h2.two-color {
+  text-transform: none;
+  font-family: "Kurale-Regular", sans-serif;
+  font-weight: 800; }
+  .app.dark h2.two-color span {
+    color: #700301; }
+
+.app.dark .header h1 {
+  font-family: "Kurale-Regular", sans-serif; }
+
+.app.dark .header-left {
+  float: left;
+  width: 700px;
+  height: 100%;
+  position: relative;
+  background: -webkit-linear-gradient(45deg, rgba(59, 1, 0, 0.89) 0%, rgba(47, 1, 0, 0.89) 100%);
+  background: linear-gradient(45deg, rgba(59, 1, 0, 0.89) 0%, rgba(47, 1, 0, 0.89) 100%); }
+  .app.dark .header-left .epaulet {
+    width: 250px;
+    height: 563px;
+    background: url("../img/epaulet-dark.png") no-repeat; }
+
+.app.dark .header-main h1 {
+  font-family: "Kurale-Regular", sans-serif; }
+
+.app.dark .content h3 {
+  border-color: #700301; }
+
+.app.dark .carousel-head h3 {
+  font-family: "Kurale-Regular", sans-serif; }
+
+.app.dark .carousel-head span {
+  font-family: "FedraSansPro-Bold", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  position: relative;
+  height: 30px; }
+  .app.dark .carousel-head span:after {
+    background: #fff; }
+  .app.dark .carousel-head span a {
+    color: #676767; }
+
+.app.dark .mark-text {
+  border-color: #700301; }
+
+.app.dark article.img h4, .app.dark article.img figcaption {
+  text-transform: none;
+  font-family: "Kurale-Regular", sans-serif; }
+
+.app.dark .footer-preview-cont.red-bg {
+  background: -webkit-linear-gradient(45deg, rgba(59, 1, 0, 0.89) 0%, rgba(47, 1, 0, 0.89) 100%);
+  background: linear-gradient(45deg, rgba(59, 1, 0, 0.89) 0%, rgba(47, 1, 0, 0.89) 100%); }
+
+.app.dark .footer-preview-cont p {
+  font-family: "Kurale-Regular", sans-serif; }
+
+.app.dark .preview-row .iteam .preview-title {
+  background: -webkit-linear-gradient(45deg, rgba(59, 1, 0, 0.89) 0%, rgba(47, 1, 0, 0.89) 100%);
+  background: linear-gradient(45deg, rgba(59, 1, 0, 0.89) 0%, rgba(47, 1, 0, 0.89) 100%); }
+  .app.dark .preview-row .iteam .preview-title p {
+    font-family: "Kurale-Regular", sans-serif; }
+
+.app.dark .preview-row .preview-nav a {
+  font-family: "Kurale-Regular", sans-serif;
+  text-transform: uppercase; }
+
+.header {
+  width: 100%;
+  height: 857px;
+  position: relative;
+  background: url("../img/header-bg.jpg") no-repeat; }
+  .header .blackout {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.5); }
+  .header h1 {
+    font-family: "Intro", sans-serif;
+    font-size: 48px;
+    line-height: 50px;
+    letter-spacing: 1.7px;
+    color: #fff;
+    font-weight: 600;
+    width: 1290px;
+    position: absolute;
+    top: 375px;
+    left: 370px;
+    z-index: 10; }
+    .header h1:after {
+      content: ' ';
+      position: absolute;
+      height: 5px;
+      width: 120px;
+      left: 4px;
+      bottom: -40px;
+      background: #fff; }
+  .header-left {
+    float: left;
+    width: 700px;
+    height: 100%;
+    position: relative;
+    background: -webkit-linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%);
+    background: linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%); }
+    .header-left .epaulet {
+      width: 255px;
+      height: 571px;
+      padding: 50px 0 0 85px;
+      background: url("../img/epaulet.png") no-repeat; }
+      .header-left .epaulet .logo.fixed {
+        position: fixed;
+        top: 50px;
+        left: 85px;
+        z-index: 500; }
+  .header-right {
+    text-align: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 230px;
+    height: 496px;
+    padding-top: 361px;
+    z-index: 400;
+    background: rgba(102, 102, 102, 0.42); }
+    .header-right .return {
+      color: #fff;
+      font-family: "FedraSansPro-Demi", sans-serif;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      width: 100%;
+      display: block; }
+      .header-right .return i {
+        display: block;
+        margin: 0 0 18px 87px; }
+
+.header-main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 55px 0 25px 85px; }
+  .header-main h1 {
+    font-size: 36px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-left: 40px; }
+
+.content p {
+  width: 830px; }
+
+.content h3 {
+  font-family: "FedraSansPro-Demi", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  display: inline-block;
+  margin: 22px 0;
+  border-bottom: 2px solid #d22c32; }
+
+.mark-text {
+  width: 880px;
+  padding: 30px;
+  margin: 45px auto;
+  border: 3px solid #e13039; }
+  .mark-text p {
+    color: #262626;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "FedraSansPro-Medium", sans-serif;
+    width: auto;
+    margin-bottom: 0; }
+
+article.img {
+  margin: 60px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  article.img h4, article.img figcaption {
+    font-family: "Intro", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    /*&:after {
+				content: '';
+				position: absolute; width: 20px; height: 7px; right: -30px; top: 20px;
+				background: #d42c33;
+			}*/ }
+  article.img p {
+    width: auto; }
+  article.img.one {
+    padding-left: 100px; }
+    article.img.one figure {
+      margin-right: 30px; }
+  article.img.several {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    article.img.several .images {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end; }
+      article.img.several .images figure {
+        text-align: left;
+        margin: 0 60px; }
+        article.img.several .images figure img {
+          width: auto; }
+        article.img.several .images figure figcaption {
+          display: block; }
+    article.img.several p {
+      clear: both; }
+
+.footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .footer-preview {
+    position: relative; }
+    .footer-preview-cont {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 35px 70px;
+      width: -webkit-calc(100% - 140px);
+      width: calc(100% - 140px); }
+      .footer-preview-cont p {
+        font-family: "FedraSansPro-Demi", sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: #fff;
+        width: 400px;
+        margin-bottom: 0;
+        position: relative; }
+        .footer-preview-cont p:after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 50px;
+          height: 2px;
+          bottom: -12px;
+          left: 2;
+          background: #fff; }
+      .footer-preview-cont.red-bg {
+        background: -webkit-linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%);
+        background: linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%); }
+
+.preview-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
+  margin: 40px 0; }
+  .preview-row:last-child {
+    margin-bottom: 0; }
+  .preview-row .iteam {
+    margin-right: 20px;
+    position: relative; }
+    .preview-row .iteam .blackout {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      background: rgba(0, 0, 0, 0.5); }
+    .preview-row .iteam .preview-title {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 13px 20px 30px 20px;
+      background: -webkit-linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%);
+      background: linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%); }
+      .preview-row .iteam .preview-title p {
+        font-family: "FedraSansPro-Demi", sans-serif;
+        font-size: 11px;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        position: relative; }
+        .preview-row .iteam .preview-title p:after {
+          content: '';
+          width: 55px;
+          height: 2px;
+          position: absolute;
+          background: #fff;
+          left: 0;
+          bottom: -10px; }
+  .preview-row .preview-nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%; }
+    .preview-row .preview-nav a {
+      font-family: "Intro", sans-serif;
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: 0;
+      color: #262626;
+      font-weight: 600;
+      margin-right: 32px;
+      margin-left: 215px; }
+
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-arrow {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 131px;
+  height: 70px; }
+
+.icon-close {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -70px;
+  width: 60px;
+  height: 60px; }
+
+.icon-nav-arrow {
+  background-image: url(../img/sprite.png);
+  background-position: -60px -70px;
+  width: 31px;
+  height: 49px; }
+
+.app {
+  min-width: 1920px;
+  width: 1920px;
+  overflow-x: hidden;
+  background: #ffffff; }
+  .app .content {
+    width: 1000px;
+    margin: 0 auto; }
+
+@font-face {
+  font-family: Intro;
+  src: url("../fonts/Intro/Intro.eot");
+  src: url("../fonts/Intro/Intro.eot") format("embedded-opentype"), url("../fonts/Intro/Intro.woff") format("woff"), url("../fonts/Intro/Intro.ttf") format("truetype"), url("../fonts/Intro/Intro.svg#Intro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Intro;
+    src: url("../fonts/Intro/Intro.svg#Intro") format("svg"); } }
+
+@font-face {
+  font-family: Kurale-Regular;
+  src: url("../fonts/Kurale-Regular/Kurale-Regular.eot");
+  src: url("../fonts/Kurale-Regular/Kurale-Regular.eot") format("embedded-opentype"), url("../fonts/Kurale-Regular/Kurale-Regular.woff") format("woff"), url("../fonts/Kurale-Regular/Kurale-Regular.ttf") format("truetype"), url("../fonts/Kurale-Regular/Kurale-Regular.svg#Kurale-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: Kurale-Regular;
+    src: url("../fonts/Kurale-Regular/Kurale-Regular.svg#Kurale-Regular") format("svg"); } }
+
+@font-face {
+  font-family: FedraSansPro-Bold;
+  src: url("../fonts/FedraSansPro-Bold/FedraSansPro-Bold.eot");
+  src: url("../fonts/FedraSansPro-Bold/FedraSansPro-Bold.eot") format("embedded-opentype"), url("../fonts/FedraSansPro-Bold/FedraSansPro-Bold.woff") format("woff"), url("../fonts/FedraSansPro-Bold/FedraSansPro-Bold.ttf") format("truetype"), url("../fonts/FedraSansPro-Bold/FedraSansPro-Bold.svg#FedraSansPro-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: FedraSansPro-Bold;
+    src: url("../fonts/FedraSansPro-Bold/FedraSansPro-Bold.svg#FedraSansPro-Bold") format("svg"); } }
+
+@font-face {
+  font-family: FedraSansPro-BoldItalic;
+  src: url("../fonts/FedraSansPro-BoldItalic/FedraSansPro-BoldItalic.eot");
+  src: url("../fonts/FedraSansPro-BoldItalic/FedraSansPro-BoldItalic.eot") format("embedded-opentype"), url("../fonts/FedraSansPro-BoldItalic/FedraSansPro-BoldItalic.woff") format("woff"), url("../fonts/FedraSansPro-BoldItalic/FedraSansPro-BoldItalic.ttf") format("truetype"), url("../fonts/FedraSansPro-BoldItalic/FedraSansPro-BoldItalic.svg#FedraSansPro-BoldItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: FedraSansPro-BoldItalic;
+    src: url("../fonts/FedraSansPro-BoldItalic/FedraSansPro-BoldItalic.svg#FedraSansPro-BoldItalic") format("svg"); } }
+
+@font-face {
+  font-family: FedraSansPro-Demi;
+  src: url("../fonts/FedraSansPro-Demi/FedraSansPro-Demi.eot");
+  src: url("../fonts/FedraSansPro-Demi/FedraSansPro-Demi.eot") format("embedded-opentype"), url("../fonts/FedraSansPro-Demi/FedraSansPro-Demi.woff") format("woff"), url("../fonts/FedraSansPro-Demi/FedraSansPro-Demi.ttf") format("truetype"), url("../fonts/FedraSansPro-Demi/FedraSansPro-Demi.svg#FedraSansPro-Demi") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: FedraSansPro-Demi;
+    src: url("../fonts/FedraSansPro-Demi/FedraSansPro-Demi.svg#FedraSansPro-Demi") format("svg"); } }
+
+@font-face {
+  font-family: FedraSansPro-DemiItalic;
+  src: url("../fonts/FedraSansPro-DemiItalic/FedraSansPro-DemiItalic.eot");
+  src: url("../fonts/FedraSansPro-DemiItalic/FedraSansPro-DemiItalic.eot") format("embedded-opentype"), url("../fonts/FedraSansPro-DemiItalic/FedraSansPro-DemiItalic.woff") format("woff"), url("../fonts/FedraSansPro-DemiItalic/FedraSansPro-DemiItalic.ttf") format("truetype"), url("../fonts/FedraSansPro-DemiItalic/FedraSansPro-DemiItalic.svg#FedraSansPro-DemiItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: FedraSansPro-DemiItalic;
+    src: url("../fonts/FedraSansPro-DemiItalic/FedraSansPro-DemiItalic.svg#FedraSansPro-DemiItalic") format("svg"); } }
+
+@font-face {
+  font-family: FedraSansPro-Light;
+  src: url("../fonts/FedraSansPro-Light/FedraSansPro-Light.eot");
+  src: url("../fonts/FedraSansPro-Light/FedraSansPro-Light.eot") format("embedded-opentype"), url("../fonts/FedraSansPro-Light/FedraSansPro-Light.woff") format("woff"), url("../fonts/FedraSansPro-Light/FedraSansPro-Light.ttf") format("truetype"), url("../fonts/FedraSansPro-Light/FedraSansPro-Light.svg#FedraSansPro-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: FedraSansPro-Light;
+    src: url("../fonts/FedraSansPro-Light/FedraSansPro-Light.svg#FedraSansPro-Light") format("svg"); } }
+
+@font-face {
+  font-family: FedraSansPro-LightItalic;
+  src: url("../fonts/FedraSansPro-LightItalic/FedraSansPro-LightItalic.eot");
+  src: url("../fonts/FedraSansPro-LightItalic/FedraSansPro-LightItalic.eot") format("embedded-opentype"), url("../fonts/FedraSansPro-LightItalic/FedraSansPro-LightItalic.woff") format("woff"), url("../fonts/FedraSansPro-LightItalic/FedraSansPro-LightItalic.ttf") format("truetype"), url("../fonts/FedraSansPro-LightItalic/FedraSansPro-LightItalic.svg#FedraSansPro-LightItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: FedraSansPro-LightItalic;
+    src: url("../fonts/FedraSansPro-LightItalic/FedraSansPro-LightItalic.svg#FedraSansPro-LightItalic") format("svg"); } }
+
+@font-face {
+  font-family: FedraSansPro-Medium;
+  src: url("../fonts/FedraSansPro-Medium/FedraSansPro-Medium.eot");
+  src: url("../fonts/FedraSansPro-Medium/FedraSansPro-Medium.eot") format("embedded-opentype"), url("../fonts/FedraSansPro-Medium/FedraSansPro-Medium.woff") format("woff"), url("../fonts/FedraSansPro-Medium/FedraSansPro-Medium.ttf") format("truetype"), url("../fonts/FedraSansPro-Medium/FedraSansPro-Medium.svg#FedraSansPro-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: FedraSansPro-Medium;
+    src: url("../fonts/FedraSansPro-Medium/FedraSansPro-Medium.svg#FedraSansPro-Medium") format("svg"); } }
+
+@font-face {
+  font-family: FedraSansPro-MediumItalic;
+  src: url("../fonts/FedraSansPro-MediumItalic/FedraSansPro-MediumItalic.eot");
+  src: url("../fonts/FedraSansPro-MediumItalic/FedraSansPro-MediumItalic.eot") format("embedded-opentype"), url("../fonts/FedraSansPro-MediumItalic/FedraSansPro-MediumItalic.woff") format("woff"), url("../fonts/FedraSansPro-MediumItalic/FedraSansPro-MediumItalic.ttf") format("truetype"), url("../fonts/FedraSansPro-MediumItalic/FedraSansPro-MediumItalic.svg#FedraSansPro-MediumItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: FedraSansPro-MediumItalic;
+    src: url("../fonts/FedraSansPro-MediumItalic/FedraSansPro-MediumItalic.svg#FedraSansPro-MediumItalic") format("svg"); } }
+
+/*********************************/
+/********** Typography ***********/
+/*********************************/
+/*********************************/
+/*********** Buttons *************/
+/*********************************/
+/*********************************/
+/******** Class Helpers **********/
+/*********************************/
+/*********************************/
+/*********** Modules *************/
+/*********************************/
