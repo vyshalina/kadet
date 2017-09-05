@@ -28,6 +28,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 60px;
   height: 60px;
 }
+.icon-dark-arrow {
+  background-image: url(../img/sprite.png);
+  background-position: -131px 0px;
+  width: 155px;
+  height: 57px;
+}
 .icon-nav-arrow {
   background-image: url(../img/sprite.png);
   background-position: -60px -70px;
