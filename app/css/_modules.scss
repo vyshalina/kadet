@@ -77,7 +77,8 @@ h2 {
 
 	.nav {
 		&-prev, &-next {
-			width: 120px; height: 100%; display: block; position: absolute; top: 0;
+			width: 120px; height: 100%; display: block; z-index: 9;
+			position: absolute; top: 0;
 			background: rgba(102,102,102,0.42);
 
 			i {position: absolute; top: 50%; margin-top: -20px; left: 50%; margin-left: -15px;}
@@ -93,13 +94,13 @@ h2 {
 	}
 
 	&-body {
-		width: 100%; overflow: hidden;
+		//width: 100%; overflow: hidden;
 		
 		&-wrapp {
-			width: 10000px; margin-left: -545px;
+			//width: 10000px; margin-left: -545px;
 
 			& > div {
-				float: left; margin-right: 35px;
+				// float: left; margin-right: 35px;
 			}
 		}
 
@@ -252,12 +253,15 @@ h2 {
 	}
 	&-right {
 		text-align: center;
-		position: fixed; right: 0; top: 0; width: 212px; height: 496px; padding-top: 361px; z-index: 400;
+		position: fixed; right: 0; top: 0; width: 212px; height: 100%; z-index: 400;
 		background: rgba(102, 102, 102, 0.42);
 
 		.return {
 			color: #fff; @include font-type($FedraSansPD, 14px, 21px, 0.7px); text-transform: uppercase;
 			width: 100%; display: block;
+
+			position: absolute; top: 50%; left: 0; transform: translateY(-50%);
+ 
 			i {
 				display: block; margin: 0 0 18px 75px;
 			}
@@ -369,6 +373,7 @@ article {
 // PREVIEW PAGES
 .preview {
 	width: 10000px;
+	position: relative;
 
 	&-wrapp {
 		display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between;  width: 1920px; height: 900px; float: left;
