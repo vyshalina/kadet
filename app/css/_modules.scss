@@ -193,27 +193,26 @@ h2 {
 	}
 
 	.preview {
-		&-row {
 
-			.iteam {
-				
-
-				.preview-title {
-
-					background: linear-gradient(45deg, rgba(59,1,0,0.89) 0%,rgba(47,1,0,0.89) 100%); 
-					
-					p {
-						font-family: $KuraleR;
-					}
-				}
-			}
+		.iteam {
 			
-			.preview-nav {
-				a {
-					font-family: $KuraleR; text-transform: uppercase;
+
+			.preview-title {
+
+				background: linear-gradient(45deg, rgba(59,1,0,0.89) 0%,rgba(47,1,0,0.89) 100%); 
+				
+				p {
+					font-family: $KuraleR;
 				}
 			}
 		}
+		
+		.preview-nav {
+			a {
+				font-family: $KuraleR; text-transform: uppercase;
+			}
+		}
+		
 	}
 }
 //////////////////////////////////////////
@@ -253,14 +252,14 @@ h2 {
 	}
 	&-right {
 		text-align: center;
-		position: fixed; right: 0; top: 0; width: 230px; height: 496px; padding-top: 361px; z-index: 400;
+		position: fixed; right: 0; top: 0; width: 212px; height: 496px; padding-top: 361px; z-index: 400;
 		background: rgba(102, 102, 102, 0.42);
 
 		.return {
 			color: #fff; @include font-type($FedraSansPD, 14px, 21px, 0.7px); text-transform: uppercase;
 			width: 100%; display: block;
 			i {
-				display: block; margin: 0 0 18px 87px;
+				display: block; margin: 0 0 18px 75px;
 			}
 		}
 	}
@@ -269,7 +268,7 @@ h2 {
 
 //HEADER-MAIN
 .header-main {
-	display: flex; align-items: center; padding: 55px 0 25px 85px;
+	display: flex; align-items: center; padding: 55px 0 55px 85px;
 
 	h1 {
 		font-size: 36px; letter-spacing: 0.5px; text-transform: uppercase;
@@ -369,14 +368,12 @@ article {
 
 // PREVIEW PAGES
 .preview {
-	&-row {
-		display: flex; width: calc(100% - 20px); margin: 40px 0;
-		&:last-child {
-			margin-bottom: 0;
-		}
+	width: 10000px;
 
+	&-wrapp {
+		display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between;  width: 1920px; height: 900px; float: left;
 		.iteam {
-			margin-right: 20px; position: relative;
+			position: relative; width: 372px; height: 270px;
 			
 			.blackout {
 				position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 0;
@@ -385,7 +382,7 @@ article {
 
 			.preview-title {
 
-				position: absolute; left: 0; bottom: 0; padding: 13px 20px 30px 20px;
+				position: absolute; left: 0; bottom: 0; padding: 13px 20px 30px 20px; width: 332px; height: 35px;
 				background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
 				
 				p {
@@ -403,12 +400,22 @@ article {
 		}
 
 		.preview-nav {
-			display: flex; align-items: center; width: 50%;
+			display: flex; align-items: center; justify-content: center; width: 50%; height: 270px;
 
-			a {
+			&.single {
+				width: 1146px;
+			}
+			&.prev {
+				i {
+					transform: rotate(180deg);
+				}
+			}
+
+			span {
 				@include font-type($Intro, 36px, 42px, 0); color: #262626; font-weight: 600;
-				margin-right: 32px; margin-left: 215px;
+				margin: 0 30px;
 			}
 		}
-	}
+	}	
+	
 }
