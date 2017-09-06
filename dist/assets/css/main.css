@@ -354,7 +354,7 @@ h2.two-color {
     position: fixed;
     right: 0;
     top: 0;
-    width: 212px;
+    width: 200px;
     height: 100%;
     z-index: 400;
     background: rgba(102, 102, 102, 0.42); }
@@ -1840,3 +1840,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   height: 100px !important;
   padding: 30px !important;
   margin-right: 30px !important; }
+
+.js-lightgallery-item {
+  cursor: pointer; }
