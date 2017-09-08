@@ -18,25 +18,43 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-arrow {
   background-image: url(../img/sprite.png);
-  background-position: 0px 0px;
+  background-position: -131px 0px;
   width: 131px;
   height: 70px;
 }
+.icon-camera {
+  background-image: url(../img/sprite.png);
+  background-position: -208px -71px;
+  width: 17px;
+  height: 12px;
+}
+.icon-close-black {
+  background-image: url(../img/sprite.png);
+  background-position: -186px -71px;
+  width: 22px;
+  height: 21px;
+}
 .icon-close {
   background-image: url(../img/sprite.png);
-  background-position: 0px -70px;
+  background-position: 0px -128px;
   width: 60px;
   height: 60px;
 }
 .icon-dark-arrow {
   background-image: url(../img/sprite.png);
-  background-position: -131px 0px;
+  background-position: 0px -71px;
   width: 155px;
   height: 57px;
 }
+.icon-lg-nav {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 131px;
+  height: 71px;
+}
 .icon-nav-arrow {
   background-image: url(../img/sprite.png);
-  background-position: -60px -70px;
+  background-position: -155px -71px;
   width: 31px;
   height: 49px;
 }
