@@ -420,8 +420,7 @@ article {
 
 // PREVIEW PAGES
 .preview {
-	position: relative;
-
+	position: relative; width: 6760px;
 	&-wrapp {
 		display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between;  width: 1920px; height: 900px; float: left;
 		.iteam {
@@ -511,6 +510,49 @@ article {
 		box-shadow: 15px 15px 0px 0 rgba(0,0,0,0.65);
 
 		img {max-width: 100%; height: 100%;}
+	}
+}
+
+//GALLERY-MODERN
+.gallery-modern {
+	display: flex; flex-wrap: wrap; justify-content: space-between;
+	padding-top: 50px;
+	.iteam {
+		display: flex; flex-direction: column; align-items: space-between;
+		width: 600px; height: auto;
+
+		figure {
+			position: relative; width: 600px; height: 500px;
+			.blackout {
+				position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: 1;
+				background: rgba(0,0,0,0.5);
+			}
+			img {
+				width: 100%; height: 100%;
+			}
+		}
+
+		.iteam-title {
+			display: flex; justify-content: space-around; align-items: center;
+			width: 100%; height: 150px;
+			background: #e3303a;
+
+			p {
+				color: #fff; font-size: 34px; font-family: $Intro; text-transform: uppercase;
+				margin-bottom: 0;
+			}
+
+			a {
+				@include font-type($FedraSansPD, 12px,20px, 1px); text-transform: uppercase; color: #e3303a;  
+				padding: 10px 30px;
+				background: #fff; border: 2px solid #fff;
+				transition: all 0.4s ease;
+				&:hover {
+					color: #fff;
+					background: #e3303a;
+				}
+			}
+		}
 	}
 }
 
