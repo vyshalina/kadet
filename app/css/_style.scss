@@ -23,8 +23,24 @@
 			}
 		}
 	}
+
+	// gallery
+	.gallery-modern {
+		transition: 0.4s ease;
+	}
+	.albom {
+		transition: 0.4s ease;
+	}
+	.gallery {
+		transition: 0.4s ease;
+	}
 	transition: all 1.2s ease;
-	// transform: translateY(100%);
+	&.main-article {
+		transform: translateY(100%);
+		&.active {
+			transform: none;
+		}
+	}
 	&.active {
 		transform: translateY(0);
 
@@ -37,6 +53,21 @@
 					opacity: 0;
 				}
 			}
+		}
+		.gallery-modern {
+			opacity: 0;
+		}
+		.albom {
+			opacity: 0;
+		}
+		.gallery {
+			opacity: 0;
+		}
+	}
+
+	&.anim {
+		&-preview {
+
 		}
 	}
 }
