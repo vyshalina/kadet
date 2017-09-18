@@ -51,6 +51,13 @@ $(document).ready(function() {
     $(".js-lightgallery").lightGallery({
         selector: '.js-lightgallery-item'
     }); 
+
+
+    $('.preview-wrapp .iteam').click(function(e) {
+        e.preventDefault();
+        $(this).addClass('active');
+        $('.app').addClass('active');
+    });
 });
 
 $(window).scroll(function() { 

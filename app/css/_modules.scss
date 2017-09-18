@@ -260,7 +260,7 @@ h2 {
 			color: #fff; @include font-type($FedraSansPD, 14px, 21px, 0.7px); text-transform: uppercase;
 			width: 100%; display: block;
 
-			position: absolute; top: 50%; left: 0; transform: translateY(-50%);
+			position: absolute; top: 460px; left: 0;
  
 			i {
 				display: block; margin: 0 0 18px 75px;
@@ -423,6 +423,7 @@ article {
 	position: relative; width: 6760px;
 	&-wrapp {
 		display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between;  width: 1920px; height: 900px; float: left;
+		
 		.iteam {
 			position: relative; width: 372px; height: 270px;
 			
