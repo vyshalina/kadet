@@ -385,11 +385,8 @@ h2.two-color {
       width: 100%;
       display: block;
       position: absolute;
-      top: 50%;
-      left: 0;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
+      top: 460px;
+      left: 0; }
       .header-right .return i {
         display: block;
         margin: 0 0 18px 75px; }
@@ -2126,12 +2123,50 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   min-width: 1920px;
   width: 1920px;
   overflow-x: hidden;
-  background: #ffffff; }
+  background: #ffffff;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease; }
   .app .content {
     width: 1050px;
     margin: 0 auto; }
+<<<<<<< HEAD
   .app .mt100 {
     margin-top: 100px; }
+=======
+  .app .header-main,
+  .app .preview-nav {
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+  .app .preview-wrapp .iteam {
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
+    .app .preview-wrapp .iteam:active, .app .preview-wrapp .iteam.active {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: .6; }
+  .app.active {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+    .app.active .header-main {
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      transform: translateY(-100%); }
+    .app.active .preview-nav {
+      -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      transform: translateY(100%); }
+    .app.active .preview-wrapp .iteam {
+      opacity: 0; }
+>>>>>>> e55107efb5d7b7c3306fd9979419677a3ffe1981
 
 @font-face {
   font-family: Intro;

@@ -7,5 +7,36 @@
 		width: 1050px; margin: 0 auto;
 	}
 
+
 	.mt100 {margin-top: 100px;}
+
+	
+	
+	.header-main, 
+	.preview-nav {transition: all .6s ease; transform: translateY(0);}
+	
+	.preview {
+		&-wrapp {
+			.iteam {
+				transition: all .4s ease; transform: scale(1); opacity: 1;
+				&:active, &.active {transform: scale(.8); opacity: .6;}
+			}
+		}
+	}
+	transition: all 1.2s ease;
+	// transform: translateY(100%);
+	&.active {
+		transform: translateY(0);
+
+		.header-main {transform: translateY(-100%);}
+		.preview-nav {transform: translateY(100%);}
+
+		.preview {
+			&-wrapp {
+				.iteam {
+					opacity: 0;
+				}
+			}
+		}
+	}
 }
