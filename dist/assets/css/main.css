@@ -120,6 +120,23 @@ p {
   letter-spacing: 1px;
   color: #666; }
 
+ol {
+  list-style-type: decimal; }
+  ol li {
+    font-family: "FedraSansPro-Book", sans-serif;
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 1px;
+    margin-left: 15px;
+    padding-left: 10px; }
+
+blockquote {
+  font-family: "FedraSansPro-MediumItalic", sans-serif;
+  font-size: 14px;
+  line-height: 29px;
+  letter-spacing: 1px;
+  color: #666; }
+
 h2.two-color {
   font-family: "Intro", sans-serif;
   font-size: 36px;
@@ -472,6 +489,9 @@ h2.two-color {
       margin: 5px auto;
       background: #000; }
 
+.owl-carousel .owl-item img {
+  max-height: 100%; }
+
 .content p {
   width: 830px; }
 
@@ -485,6 +505,23 @@ h2.two-color {
   display: inline-block;
   margin: 22px 0;
   border-bottom: 2px solid #d22c32; }
+
+.content ul li {
+  font-family: "FedraSansPro-LightItalic", sans-serif;
+  font-size: 14px;
+  line-height: 29px;
+  letter-spacing: 1px;
+  color: #666;
+  position: relative;
+  padding-left: 20px; }
+  .content ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 7px;
+    height: 3px;
+    background: #df1722; }
 
 .mark-text {
   width: 880px;
@@ -541,10 +578,10 @@ article.img {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       -webkit-box-align: end;
       -webkit-align-items: flex-end;
       -ms-flex-align: end;
@@ -2091,8 +2128,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   overflow-x: hidden;
   background: #ffffff; }
   .app .content {
-    width: 1000px;
+    width: 1050px;
     margin: 0 auto; }
+  .app .mt100 {
+    margin-top: 100px; }
 
 @font-face {
   font-family: Intro;

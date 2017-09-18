@@ -6,7 +6,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
 	@include font-type($FedraSansPBk, 14px, 29px, 1px); color: #666;
+	
 }
+
+ol {
+	list-style-type: decimal;
+	li {@include font-type($FedraSansPBk, 14px, 29px, 1px); margin-left: 15px; padding-left: 10px;}
+}
+
+blockquote {@include font-type($FedraSansPMI, 14px, 29px, 1px); color: #666;}
 
 h2 {
 	&.two-color {
@@ -350,6 +358,12 @@ h2 {
 	}
 }
 
+.owl-carousel {
+	.owl-item {
+		img {max-height: 100%;}
+	}
+}
+
 .content {
 	p {
 		width: 830px;
@@ -358,6 +372,19 @@ h2 {
 		@include font-type($FedraSansPD, 14px, 21px, 0.7px); text-transform: uppercase;
 		padding-bottom: 20px; display: inline-block; margin: 22px 0;
 		border-bottom: 2px solid #d22c32;
+	}
+
+	ul {
+		li {
+			@include font-type($FedraSansPLI, 14px, 29px, 1px); color: #666;
+			position: relative; padding-left: 20px;
+
+			&:before {
+				content: '';
+				position: absolute; left: 0; top: 15px; width: 7px; height: 3px; 
+				background: #df1722;
+			}
+		}
 	}
 }
 
@@ -399,7 +426,7 @@ article {
 		&.several {
 			display: flex; flex-direction: column;
 			.images { 
-				display: flex; justify-content: center; align-items: flex-end;
+				display: flex; justify-content: flex-start; align-items: flex-end;
 				figure {
 					text-align: left; margin: 0 60px;
 					img {
