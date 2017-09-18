@@ -40,11 +40,11 @@ $(document).ready(function() {
     });
 
     $('.nav-prev').click(function() {
-        owl.trigger('next.owl.carousel');
+        owl.trigger('prev.owl.carousel');
         return false;
     });
     $('.nav-next').click(function() {
-        owl.trigger('prev.owl.carousel', [300]);
+        owl.trigger('next.owl.carousel', [300]);
         return false;
     });
 

@@ -128,7 +128,8 @@ ol {
     line-height: 29px;
     letter-spacing: 1px;
     margin-left: 15px;
-    padding-left: 10px; }
+    padding-left: 10px;
+    color: #666; }
 
 blockquote {
   font-family: "FedraSansPro-MediumItalic", sans-serif;
@@ -319,16 +320,20 @@ h2.two-color {
 .header {
   width: 100%;
   height: 857px;
-  position: relative;
-  background: url("../img/header-bg.jpg") no-repeat; }
+  position: relative; }
   .header .blackout {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.63); }
+  .header > img {
+    position: absolute;
     z-index: 0;
-    background: rgba(0, 0, 0, 0.5); }
+    left: 0;
+    top: 0; }
   .header h1 {
     font-family: "Intro", sans-serif;
     font-size: 48px;
@@ -354,6 +359,7 @@ h2.two-color {
     width: 700px;
     height: 100%;
     position: relative;
+    z-index: 2;
     background: -webkit-linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%);
     background: linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%); }
     .header-left .epaulet {
@@ -944,6 +950,14 @@ article.img {
   display: flex; }
   .footer-preview {
     position: relative; }
+    .footer-preview .blackout {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      background: rgba(0, 0, 0, 0.5); }
     .footer-preview-cont {
       position: absolute;
       left: 0;
@@ -1590,6 +1604,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   z-index: 1080;
   cursor: pointer; }
 
+.lg-outer .lg-has-iframe .lg-video {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto; }
+
 .lg-outer .lg-has-vimeo .lg-video-play {
   background: url(../img/vimeo-play.png) no-repeat; }
 
@@ -2129,10 +2147,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .app .content {
     width: 1050px;
     margin: 0 auto; }
-<<<<<<< HEAD
   .app .mt100 {
     margin-top: 100px; }
-=======
   .app .header-main,
   .app .preview-nav {
     -webkit-transition: all .6s ease;
@@ -2166,7 +2182,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       transform: translateY(100%); }
     .app.active .preview-wrapp .iteam {
       opacity: 0; }
->>>>>>> e55107efb5d7b7c3306fd9979419677a3ffe1981
 
 @font-face {
   font-family: Intro;

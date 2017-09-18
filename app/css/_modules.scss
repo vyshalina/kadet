@@ -11,7 +11,7 @@ p {
 
 ol {
 	list-style-type: decimal;
-	li {@include font-type($FedraSansPBk, 14px, 29px, 1px); margin-left: 15px; padding-left: 10px;}
+	li {@include font-type($FedraSansPBk, 14px, 29px, 1px); margin-left: 15px; padding-left: 10px; color: #666;}
 }
 
 blockquote {@include font-type($FedraSansPMI, 14px, 29px, 1px); color: #666;}
@@ -229,11 +229,11 @@ h2 {
 //HEADER-INDEX
 .header {
 	width: 100%; height: 857px; position: relative;
-	background: url('../img/header-bg.jpg') no-repeat;
 	.blackout {
-		position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 0;
-		background: rgba(0,0,0,0.5);
+		position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1;
+		background: rgba(0,0,0,0.63);
 	}
+	& > img {position: absolute; z-index: 0; left: 0; top: 0;}
 	h1 {
 		@include font-type($Intro, 48px, 50px, 1.7px); color: #fff; font-weight: 600;
 		width: 1290px; position: absolute; top: 375px; left: 370px;  z-index: 10; 
@@ -245,7 +245,7 @@ h2 {
 	}
 	&-left {
 		float: left;
-		width: 700px; height: 100%; position: relative;
+		width: 700px; height: 100%; position: relative; z-index: 2;
 		background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
 
 		.epaulet {
@@ -640,6 +640,10 @@ article {
 	display: flex;
 	&-preview {
 		position: relative;
+		.blackout {
+			position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 0;
+			background: rgba(0,0,0,0.5);
+		}
 		&-cont {
 			position: absolute; left: 0; bottom: 0; padding: 35px 70px; width: calc(100% - 140px);
 			p {
