@@ -16,6 +16,13 @@ $(document).ready(function() {
         });
     });
 
+    $('.js-next_3').click(function(e) {
+        e.preventDefault();
+        $('.preview').animate({
+            'right' : "5760px"
+        });
+    });
+
     $('.js-prev_1').click(function(e) {
         e.preventDefault();
         $('.preview').animate({
@@ -27,6 +34,13 @@ $(document).ready(function() {
         e.preventDefault();
         $('.preview').animate({
             'right' : "1920px"
+        });
+    });
+
+    $('.js-prev_3').click(function(e) {
+        e.preventDefault();
+        $('.preview').animate({
+            'right' : "3840px"
         });
     });
 

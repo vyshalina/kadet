@@ -72,7 +72,7 @@ h2 {
  		h3 {
 			@include font-type($Intro, 36px, 50px, 0.8px); text-transform: uppercase;	
 		}
-		span {
+		span { display: none;
 			@include font-type($FedraSansPB, 14px, 18px, 0.8px);
 			position: relative; height: 30px;
 			
@@ -82,7 +82,7 @@ h2 {
 				background: #df1722;
 			}
 
-			a {color: #df1722;}
+			a {color: #df1722; }
 		}
  	}
 	
@@ -208,7 +208,6 @@ h2 {
 	.preview {
 
 		.iteam {
-			
 
 			.preview-title {
 
@@ -425,11 +424,11 @@ article {
 		h4, figcaption {
 			@include font-type($Intro, 24px, 30px, 0); text-transform: uppercase; font-weight: 600;
 			position: relative; display: inline-block; margin-bottom: 20px;
-			/*&:after {
+			&:after {
 				content: '';
-				position: absolute; width: 20px; height: 7px; right: -30px; top: 20px;
+				width: 20px; height: 7px; display: inline-block; margin-left: 15px;
 				background: #d42c33;
-			}*/
+			}
 		}
 		p {
 			width: auto;
@@ -469,7 +468,7 @@ article {
 
 // PREVIEW PAGES
 .preview {
-	position: relative; width: 6760px;
+	position: relative; width: 10000px;
 	&-wrapp {
 		display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between;  width: 1920px; height: 900px; float: left;
 		
@@ -480,6 +479,8 @@ article {
 				position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 0;
 				background: rgba(0,0,0,0.5);
 			}
+
+			img {width: 100%;}
 
 			.preview-title {
 

@@ -211,6 +211,7 @@ h2.two-color {
       letter-spacing: 0.8px;
       text-transform: uppercase; }
     .carousel-head span {
+      display: none;
       font-family: "FedraSansPro-Bold", sans-serif;
       font-size: 14px;
       line-height: 18px;
@@ -575,12 +576,14 @@ article.img {
     font-weight: 600;
     position: relative;
     display: inline-block;
-    margin-bottom: 20px;
-    /*&:after {
-				content: '';
-				position: absolute; width: 20px; height: 7px; right: -30px; top: 20px;
-				background: #d42c33;
-			}*/ }
+    margin-bottom: 20px; }
+    article.img h4:after, article.img figcaption:after {
+      content: '';
+      width: 20px;
+      height: 7px;
+      display: inline-block;
+      margin-left: 15px;
+      background: #d42c33; }
   article.img p {
     width: auto; }
   article.img.one {
@@ -622,7 +625,7 @@ article.img {
 
 .preview {
   position: relative;
-  width: 6760px; }
+  width: 10000px; }
   .preview-wrapp {
     display: -webkit-box;
     display: -webkit-flex;
@@ -653,6 +656,8 @@ article.img {
         bottom: 0;
         z-index: 0;
         background: rgba(0, 0, 0, 0.5); }
+      .preview-wrapp .iteam img {
+        width: 100%; }
       .preview-wrapp .iteam .preview-title {
         position: absolute;
         left: 0;
