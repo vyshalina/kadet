@@ -401,7 +401,7 @@ h2.two-color {
         margin: 0 0 18px 75px; }
 
 .right-side {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100%;
   height: 100%;
@@ -409,7 +409,8 @@ h2.two-color {
   background: transparent;
   -webkit-transition: .4s ease;
   transition: .4s ease;
-  pointer-events: none; }
+  pointer-events: none;
+  overflow-x: hidden; }
   .right-side.active {
     background: rgba(0, 0, 0, 0.7);
     pointer-events: all; }
@@ -2195,9 +2196,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .app .albom {
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease; }
+    .app .albom .iteam {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-transition: 0.3s ease;
+      transition: 0.3s ease; }
   .app .gallery {
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease; }
+    .app .gallery .iteam {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-transition: 0.3s ease;
+      transition: 0.3s ease; }
   .app.main-article {
     -webkit-transform: translateY(100%);
     -ms-transform: translateY(100%);
@@ -2224,8 +2239,22 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       opacity: 0; }
     .app.active .albom {
       opacity: 0; }
+      .app.active .albom .iteam {
+        -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        transform: translateY(30px);
+        opacity: 0;
+        -webkit-transition-delay: 1s !important;
+        transition-delay: 1s !important; }
     .app.active .gallery {
       opacity: 0; }
+      .app.active .gallery .iteam {
+        -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        transform: translateY(30px);
+        opacity: 0;
+        -webkit-transition-delay: 1s !important;
+        transition-delay: 1s !important; }
 
 @font-face {
   font-family: Intro;

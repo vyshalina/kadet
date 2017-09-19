@@ -30,9 +30,19 @@
 	}
 	.albom {
 		transition: 0.4s ease;
+		.iteam {
+			transform: translateY(0);
+			opacity: 1;
+			transition: 0.3s ease;
+		}
 	}
 	.gallery {
 		transition: 0.4s ease;
+		.iteam {
+			transform: translateY(0);
+			opacity: 1;
+			transition: 0.3s ease;
+		}
 	}
 	transition: all 1.2s ease;
 	&.main-article {
@@ -59,9 +69,19 @@
 		}
 		.albom {
 			opacity: 0;
+			.iteam {
+				transform: translateY(30px);
+				opacity: 0;
+				transition-delay: 1s !important;
+			}
 		}
 		.gallery {
 			opacity: 0;
+			.iteam {
+				transform: translateY(30px);
+				opacity: 0;
+				transition-delay: 1s !important;
+			}
 		}
 	}
 

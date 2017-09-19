@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
-
+    var previewCount = 0;
     $('.js-next_1').click(function(e) {
         e.preventDefault();
+        previewCount = 1;
         $('.preview').animate({
             'right' : "1920px"
         });
@@ -11,6 +12,7 @@ $(document).ready(function() {
 
     $('.js-next_2').click(function(e) {
         e.preventDefault();
+        previewCount = 2;
         $('.preview').animate({
             'right' : "3840px"
         });
@@ -18,6 +20,7 @@ $(document).ready(function() {
 
     $('.js-prev_1').click(function(e) {
         e.preventDefault();
+        previewCount = 0;
         $('.preview').animate({
             'right' : "0"
         });
@@ -25,9 +28,36 @@ $(document).ready(function() {
 
     $('.js-prev_2').click(function(e) {
         e.preventDefault();
+        previewCount = 1;
         $('.preview').animate({
             'right' : "1920px"
         });
+    });
+
+    $('.preview').swipe({
+        swipe: function (event, direction) {
+            if (direction === 'left' && previewCount == 0) {
+                $('.preview').animate({
+                    'right' : "1920px"
+                });
+                previewCount++;
+            } else if (direction === 'left' && previewCount == 1) {
+                $('.preview').animate({
+                    'right' : "3840px"
+                });
+                previewCount++;
+            } else if (direction === 'right' && previewCount == 2) {
+                $('.preview').animate({
+                    'right' : "1920px"
+                });
+                previewCount--;
+            } else if (direction === 'right' && previewCount == 1) {
+                $('.preview').animate({
+                    'right' : "0px"
+                });
+                previewCount--;
+            }
+        }
     });
 
 
@@ -53,34 +83,10 @@ $(document).ready(function() {
     }); 
 
 
-    $('.preview-wrapp .iteam').click(function(e) {
+    $('.preview-wrapp .iteam, .gallery-modern .iteam a, .albom .iteam').click(function(e) {
         e.preventDefault();
 
         $(this).addClass('active');
-        $('.app').addClass('active');
-
-        // linking delay
-        var locHref = $(this).attr('href');
-        setTimeout(function(){
-            window.location.href = locHref; 
-        },600);
-    });
-
-    $('.gallery-modern .iteam a').click(function(e) {
-        e.preventDefault();
-
-        $('.app').addClass('active');
-
-        // linking delay
-        var locHref = $(this).attr('href');
-        setTimeout(function(){
-            window.location.href = locHref; 
-        },600);
-    });
-
-    $('.albom .iteam').click(function(e) {
-        e.preventDefault();
-
         $('.app').addClass('active');
 
         // linking delay
@@ -111,6 +117,28 @@ $(document).ready(function() {
         $('.sidebar-menu').removeClass('active');
         return false;
     });
+    $('.sidebar-menu ul li a').click(function(e){
+        e.preventDefault();
+
+        $('.sidebar-menu').removeClass('active');
+        $('.app').addClass('active');
+
+        // linking delay
+        var locHref = $(this).attr('href');
+        setTimeout(function(){
+            window.location.href = locHref; 
+        },600);
+    });
+
+    // gallery item fade
+    var galleryLength = $('.gallery .iteam').length,
+        albomLength = $('.albom .iteam').length;
+    for(i=0;i<galleryLength;i++) {
+        $('.gallery .iteam').eq(i).css('transition-delay', i/10 + 's');
+    }
+    for(i=0;i<albomLength;i++) {
+        $('.albom .iteam').eq(i).css('transition-delay', i/10 + 's');
+    }
 
 
 });
