@@ -21,6 +21,7 @@
     "animate.css": "^3.5.2",
     "owl.carousel": "^2.2.1",
     "lg-thumbnail": "^1.1.0",
-    "lightgallery": "^1.6.0"
+    "lightgallery": "^1.6.0",
+    "jquery-touchswipe": "^1.6.18"
   }
 }
