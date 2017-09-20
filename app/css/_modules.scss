@@ -721,7 +721,7 @@ article {
 			left: 0 !important;
 		}
 		&.lg-next {
-			right: 0 !important;
+			right: 0 !important; top: 0; margin-top: 0;
 			transform: rotate(180deg);
 		}
 		
