@@ -121,7 +121,7 @@ $(document).ready(function() {
         },600);
     });
 
-    $('.js-return').click(function(e){
+    $('.header-right .return').click(function(e){
         e.preventDefault();
 
         $('.app').removeClass('active');
