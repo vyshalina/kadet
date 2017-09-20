@@ -107,7 +107,7 @@ $(document).ready(function() {
     }); 
 
 
-    $('.preview-wrapp .iteam, .gallery-modern .iteam a, .albom .iteam').click(function(e) {
+    $('.preview-wrapp a.iteam, .gallery-modern .iteam a, .albom .iteam').click(function(e) {
         e.preventDefault();
 
         $(this).addClass('active');
