@@ -146,22 +146,23 @@ h2.two-color {
   color: #262626;
   text-transform: uppercase;
   margin: 100px 0 35px 0;
-  position: relative; }
+  position: relative;
+  display: inline-block; }
   h2.two-color:before {
     content: '';
-    width: 360px;
+    width: 1200px;
     height: 1px;
     position: absolute;
-    left: -460px;
+    left: -1295px;
     top: 25px;
     z-index: 11;
     background: #e6e6e6; }
   h2.two-color:after {
     content: '';
-    width: 745px;
+    width: 1200px;
     height: 1px;
     position: absolute;
-    right: -560px;
+    right: -1360px;
     z-index: 11;
     top: 25px;
     background: #e6e6e6; }
@@ -349,7 +350,7 @@ h2.two-color {
     position: absolute;
     top: 375px;
     left: 370px;
-    z-index: 10; }
+    z-index: 13; }
     .header h1:after {
       content: ' ';
       position: absolute;
@@ -363,7 +364,7 @@ h2.two-color {
     width: 700px;
     height: 100%;
     position: relative;
-    z-index: 2;
+    z-index: 12;
     background: -webkit-linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%);
     background: linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%); }
     .header-left .epaulet {
