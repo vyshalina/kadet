@@ -45,6 +45,11 @@
 		}
 	}
 	transition: all 1.2s ease;
+	.header {
+		&:after {
+			opacity: 0; transition: 2s 1.2s ease;
+		}
+	}
 	&.main-article {
 		transform: translateY(100%);
 		&.active {
@@ -56,6 +61,12 @@
 	}
 	&.active {
 		transform: translateY(0);
+
+		.header {
+			&:after {
+				opacity: 1;
+			}
+		}
 
 		.header-main {transform: translateY(-100%);}
 		.preview-nav {transform: translateY(100%);}
@@ -85,12 +96,6 @@
 				opacity: 0;
 				transition-delay: 1s !important;
 			}
-		}
-	}
-
-	&.anim {
-		&-preview {
-
 		}
 	}
 }
