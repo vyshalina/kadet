@@ -9,7 +9,6 @@ $(document).ready(function() {
         });
     });
 
-
     $('.js-next_2').click(function(e) {
         e.preventDefault();
         previewCount = 2;
@@ -46,7 +45,7 @@ $(document).ready(function() {
         $('.preview').animate({
             'right' : "3840px"
         });
-
+    });
     $('.preview').swipe({
         swipe: function (event, direction) {
             if (direction === 'left' && previewCount == 0) {
@@ -152,8 +151,6 @@ $(document).ready(function() {
     for(i=0;i<albomLength;i++) {
         $('.albom .iteam').eq(i).css('transition-delay', i/10 + 's');
     }
-
-
 });
 
 $(window).scroll(function() { 
