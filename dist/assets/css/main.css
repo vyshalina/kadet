@@ -186,7 +186,7 @@ h2.two-color {
 .carousel {
   width: 1497px;
   height: 720px;
-  margin: 50px auto;
+  margin: 100px auto;
   padding-top: 140px;
   position: relative;
   background: url(../img/coruesel-bg.jpg) no-repeat;
@@ -644,7 +644,8 @@ article.img {
     justify-content: space-between;
     width: 1920px;
     height: 900px;
-    float: left; }
+    float: left;
+    overflow: hidden; }
     .preview-wrapp .iteam {
       position: relative;
       width: 372px;
@@ -976,7 +977,8 @@ article.img {
   display: -ms-flexbox;
   display: flex; }
   .footer-preview {
-    position: relative; }
+    position: relative;
+    width: 640px; }
     .footer-preview .blackout {
       position: absolute;
       left: 0;
@@ -985,6 +987,8 @@ article.img {
       bottom: 0;
       z-index: 0;
       background: rgba(0, 0, 0, 0.5); }
+    .footer-preview > img {
+      width: 100%; }
     .footer-preview-cont {
       position: absolute;
       left: 0;

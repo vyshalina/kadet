@@ -62,7 +62,7 @@ h2 {
 /*********************************/
 
 .carousel {
-	width: 1497px; height: 720px; margin: 50px auto; padding-top: 140px; position: relative;
+	width: 1497px; height: 720px; margin: 100px auto; padding-top: 140px; position: relative;
 	background: url(../img/coruesel-bg.jpg) no-repeat; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
 
  	&-head {
@@ -472,7 +472,7 @@ article {
 	position: relative; width: 10000px;
 	&-wrapp {
 		display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between;  width: 1920px; height: 900px; float: left;
-		
+		overflow: hidden;
 		.iteam {
 			position: relative; width: 372px; height: 270px;
 			
@@ -663,10 +663,13 @@ article {
 .footer {
 	display: flex;
 	&-preview {
-		position: relative;
+		position: relative; width: 640px;
 		.blackout {
 			position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 0;
 			background: rgba(0,0,0,0.5);
+		}
+		& > img {
+			width: 100%;
 		}
 		&-cont {
 			position: absolute; left: 0; bottom: 0; padding: 35px 70px; width: calc(100% - 140px);
