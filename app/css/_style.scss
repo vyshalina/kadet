@@ -50,6 +50,9 @@
 		&.active {
 			transform: none;
 		}
+		&.active2{
+			transform: translateY(-100%);
+		}
 	}
 	&.active {
 		transform: translateY(0);

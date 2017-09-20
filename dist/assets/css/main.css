@@ -2230,6 +2230,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -webkit-transform: none;
       -ms-transform: none;
       transform: none; }
+    .app.main-article.active2 {
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      transform: translateY(-100%); }
   .app.active {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);

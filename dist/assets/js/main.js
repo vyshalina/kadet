@@ -19,6 +19,7 @@ $(document).ready(function() {
 
     $('.js-next_3').click(function(e) {
         e.preventDefault();
+        previewCount = 3;
         $('.preview').animate({
             'right' : "5760px"
         });
@@ -42,6 +43,7 @@ $(document).ready(function() {
 
     $('.js-prev_3').click(function(e) {
         e.preventDefault();
+        previewCount = 2;
         $('.preview').animate({
             'right' : "3840px"
         });
@@ -58,6 +60,16 @@ $(document).ready(function() {
                     'right' : "3840px"
                 });
                 previewCount++;
+            } else if (direction === 'left' && previewCount == 2) {
+                $('.preview').animate({
+                    'right' : "5760px"
+                });
+                previewCount++;
+            } else if (direction === 'right' && previewCount == 3) {
+                $('.preview').animate({
+                    'right' : "3840px"
+                });
+                previewCount--;
             } else if (direction === 'right' && previewCount == 2) {
                 $('.preview').animate({
                     'right' : "1920px"
@@ -100,6 +112,7 @@ $(document).ready(function() {
 
         $(this).addClass('active');
         $('.app').addClass('active');
+        $('body').addClass('ov-hidden');
 
         // linking delay
         var locHref = $(this).attr('href');
@@ -151,6 +164,20 @@ $(document).ready(function() {
     for(i=0;i<albomLength;i++) {
         $('.albom .iteam').eq(i).css('transition-delay', i/10 + 's');
     }
+
+    // bottom preview
+    $('.js-bottom-preview').click(function(e){
+        e.preventDefault();
+
+        $('.app').addClass('active2');
+        $('body').addClass('ov-hidden');
+
+        // linking delay
+        var locHref = $(this).attr('href');
+        setTimeout(function(){
+            window.location.href = locHref; 
+        },1200);
+    });
 });
 
 $(window).scroll(function() { 
