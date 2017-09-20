@@ -741,10 +741,6 @@ article.img {
   -webkit-align-content: space-between;
   -ms-flex-line-pack: justify;
   align-content: space-between;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   width: 1920px;
   height: 900px;
   float: left;
@@ -812,26 +808,30 @@ article.img {
   -webkit-align-content: space-between;
   -ms-flex-line-pack: justify;
   align-content: space-between;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
   width: 1920px;
   height: 900px;
   float: left;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: -webkit-calc(100% - 90px);
   width: calc(100% - 90px);
   height: auto;
   padding: 0 0 35px 50px; }
   .gallery .iteam {
     position: relative;
-    width: 210px;
-    height: 330px;
-    margin: 25px 15px;
-    -webkit-box-shadow: 15px 15px 0px 0 rgba(0, 0, 0, 0.65);
-    box-shadow: 15px 15px 0px 0 rgba(0, 0, 0, 0.65); }
+    margin: 25px; }
     .gallery .iteam img {
-      max-width: 100%;
-      height: 100%; }
+      -webkit-box-shadow: 15px 15px 0px 0 rgba(0, 0, 0, 0.65);
+      box-shadow: 15px 15px 0px 0 rgba(0, 0, 0, 0.65);
+      width: 210px;
+      height: auto;
+      max-height: 330px; }
+    .gallery .iteam.horizontal img {
+      width: auto;
+      max-width: 210px;
+      height: 210px; }
 
 .gallery-modern {
   display: -webkit-box;
@@ -897,7 +897,9 @@ article.img {
         font-size: 34px;
         font-family: "Intro", sans-serif;
         text-transform: uppercase;
-        margin-bottom: 0; }
+        line-height: 40px;
+        margin-bottom: 0;
+        width: 310px; }
       .gallery-modern .iteam .iteam-title a {
         font-family: "FedraSansPro-Demi", sans-serif;
         font-size: 12px;
