@@ -383,6 +383,8 @@ h2.two-color {
       height: 571px;
       padding: 50px 0 0 85px;
       background: url("../img/epaulet.png") no-repeat; }
+      .header-left .epaulet .logo {
+        display: none; }
       .header-left .epaulet .logo.fixed {
         position: fixed;
         top: 50px;
@@ -930,8 +932,13 @@ article.img {
   background: #111; }
   .video-show-body {
     width: 1042px;
-    height: 710px;
+    height: auto;
     margin: 0 auto; }
+    .video-show-body h2 {
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
+      padding: 40px 0; }
 
 .video-nav > li {
   display: block;
