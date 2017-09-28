@@ -1,5 +1,5 @@
 .app {
-	min-width: 1920px; width: 1920px;
+	width: 1920px;
 	overflow-x: hidden;
 	background: #ffffff;
 
@@ -69,7 +69,10 @@
 		}
 
 		.header-main {transform: translateY(-100%);}
-		.preview-nav {transform: translateY(100%);}
+		.preview-nav {
+			transform: translateY(100%); opacity: 0;
+			&.back {transform: translateY(-100%); opacity: 0;}
+		}
 
 		.preview {
 			&-wrapp {

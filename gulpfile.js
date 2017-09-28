@@ -92,13 +92,13 @@ gulp.task('sprite', function () {
 gulp.task('html:build', function () {
 	gulp.src('app/*.html')
 	.pipe(rigger())
-	.pipe(gulp.dest('dist'))
-	.pipe(browserSync.reload({stream: true}));
+	.pipe(gulp.dest('dist'));
+	// .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('watch', ['html:build', 'js:libs', 'js:main', 'sprite', 'browser-sync','sass', /*'css:min'*/], function () {
 	gulp.watch('app/css/*.scss', ['sass'/*, 'css:min'*/]);
-	gulp.watch('app/*.html', ['html:build']);
+	gulp.watch('app/**/*.html', ['html:build']);
 	gulp.watch('app/img/icons/*.png', ['sprite', 'sass']);
 	gulp.watch('app/js/*.js', ['js:main']);
 });

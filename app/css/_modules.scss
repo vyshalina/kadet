@@ -478,7 +478,7 @@ article {
 	position: relative; width: 10000px;
 	&-wrapp {
 		display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between;  width: 1920px; height: 900px; float: left;
-		overflow: hidden;
+
 		.iteam {
 			position: relative; width: 372px; height: 270px;
 			
@@ -495,7 +495,7 @@ article {
 				background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
 				
 				p {
-					@include font-type($FedraSansPD, 11px, 18px, 0.5px); color: #fff; text-transform: uppercase;
+					@include font-type($FedraSansPD, 12px, 18px, 0.5px); color: #fff; text-transform: uppercase;
 					margin-bottom: 0; position: relative;
 
 					&:after {
@@ -509,20 +509,23 @@ article {
 		}
 
 		.preview-nav {
-			display: flex; align-items: center; justify-content: center; width: 50%; height: 270px;
+			display: flex; flex-flow: column nowrap; justify-content: center;
+			width: 372px; height: 270px;
+			box-sizing: border-box;
 
-			&.single {
-				width: 1146px;
-			}
 			&.prev {
 				i {
 					transform: rotate(180deg);
 				}
 			}
 
+			&.forward {align-items: flex-start; padding-left: 45px; i {margin-left: 3px;}}
+			&.back {align-items: flex-end; padding-right: 45px; i {margin-right: 2px;} span {text-align: right;}}
+			
+			i {margin-bottom: 25px;}
 			span {
+				margin-bottom: 5px;
 				@include font-type($Intro, 36px, 42px, 0); color: #262626; font-weight: 600;
-				margin: 0 30px;
 			}
 		}
 	}	
@@ -559,6 +562,22 @@ article {
 }
 
 //GALLERY
+.arrow_back {
+	position: absolute;
+    right: 180px;
+    top: 54px;
+    
+	span {
+	    color: #262626;
+	    font-family: "Intro",sans-serif;
+	    font-size: 30px;
+	    font-weight: 100;
+	    left: -25px;
+	    letter-spacing: 0;
+	    position: relative;
+	    top: -25px;
+	}
+}
 .gallery {
 	display: flex; flex-wrap: wrap; align-content: space-between;  width: 1920px; height: 900px; float: left; align-items: center;
 	width: calc(100% - 90px); height: auto; padding: 0 0 35px 50px;
@@ -607,7 +626,7 @@ article {
 				margin-bottom: 0; width: 310px;
 			}
 
-			a {
+			span {
 				@include font-type($FedraSansPD, 12px,20px, 1px); text-transform: uppercase; color: #e3303a;  
 				padding: 10px 30px;
 				background: #fff; border: 2px solid #fff;
@@ -628,7 +647,10 @@ article {
 		background: #111;
 		&-body {
 			width: 1042px; height: auto; margin: 0 auto;
-			h2 {color: #fff; text-align: center; font-size: 20px; padding: 40px 0;}
+			p {
+				font-family: "FedraSansPro-Demi",sans-serif; font-weight: 100; color: #fff; text-align: center; font-size: 14px; padding: 20px; margin-bottom: 0; text-align: left; text-transform: uppercase; line-height: 24px;
+				
+			}
 		}
 	}
 	&-nav {
@@ -636,6 +658,8 @@ article {
 			display: block;  width: 192px; height: 192px;
 			a {
 				position: relative; display: block; width: 100%; height: 100%;
+				font-family: "FedraSansPro-Demi",sans-serif; font-weight: 100;
+
 
 				&.active, &:hover {
 					& > .blackout {
@@ -643,29 +667,29 @@ article {
 					}
 
 					.title {
+						color: rgba(255,255,255,1);
 						background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
 						span {
 							background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
 						}
 					}
-					
 				}
+
+				&.active {&:hover {cursor: default;}}
 
 				& > .blackout {
 					position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: 1;
 					background: rgba(0,0,0,0.5);
-					transition: all 0.4s ease;
 				}
 				.title {
-					font-size: 11px; text-transform: uppercase; color: #fff;
+					font-size: 11px; text-transform: uppercase; color: rgba(255,255,255,0.6);
 					position: absolute; z-index: 2; bottom: 0; left: 0; width: calc(100% -40px); padding: 7px 20px;
 					background: rgba(0,0,0,0.82);
-					transition: all 0.4s ease;
+
 					span {
 						color: rgba(255,255,255,0.42); text-align: center; line-height: 1;
 						position: absolute; top: -20px; left: 0; width: 60px; padding: 9px 0 0 0;
 						background: rgba(0,0,0,0.82);
-						transition: all 0.4s ease;
 					}
 				}
 			}
