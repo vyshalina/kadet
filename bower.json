@@ -15,13 +15,13 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.2.1",
     "normalize-css": "^6.0.0",
     "font-awesome": "^4.7.0",
     "animate.css": "^3.5.2",
     "owl.carousel": "^2.2.1",
     "lg-thumbnail": "^1.1.0",
     "lightgallery": "^1.6.0",
-    "jquery-touchswipe": "^1.6.18"
+    "jquery-touchswipe": "^1.6.18",
+    "jquery": "2.2.4"
   }
 }
