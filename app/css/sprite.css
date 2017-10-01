@@ -24,13 +24,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-camera {
   background-image: url(../img/sprite.png);
-  background-position: -208px -71px;
+  background-position: -186px -103px;
   width: 17px;
   height: 12px;
 }
 .icon-close-black {
   background-image: url(../img/sprite.png);
-  background-position: -186px -71px;
+  background-position: -156px -128px;
   width: 22px;
   height: 21px;
 }
@@ -46,6 +46,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 155px;
   height: 57px;
 }
+.icon-fullscreen {
+  background-image: url(../img/sprite.png);
+  background-position: -186px -71px;
+  width: 32px;
+  height: 32px;
+}
 .icon-lg-nav {
   background-image: url(../img/sprite.png);
   background-position: 0px 0px;
@@ -57,4 +63,28 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: -155px -71px;
   width: 31px;
   height: 49px;
+}
+.icon-pause {
+  background-image: url(../img/sprite.png);
+  background-position: -218px -71px;
+  width: 32px;
+  height: 32px;
+}
+.icon-play {
+  background-image: url(../img/sprite.png);
+  background-position: -60px -128px;
+  width: 32px;
+  height: 32px;
+}
+.icon-sound {
+  background-image: url(../img/sprite.png);
+  background-position: -92px -128px;
+  width: 32px;
+  height: 32px;
+}
+.icon-sound_off {
+  background-image: url(../img/sprite.png);
+  background-position: -124px -128px;
+  width: 32px;
+  height: 32px;
 }
