@@ -49,9 +49,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0px;
-  /* сглаживание шрифтов в вебките */
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-smoothing: subpixel-antialiased; }
+  /* сглаживание шрифтов в вебките */ }
   body.onload {
     overflow: hidden; }
 
@@ -2417,8 +2415,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s; }
 
 .app {
-  width: 1920px;
+  width: 1900px;
   background: #ffffff;
+  overflow-x: hidden;
   -webkit-transition: all 1.2s ease;
   transition: all 1.2s ease; }
   .app .content {

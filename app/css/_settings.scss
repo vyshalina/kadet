@@ -40,8 +40,8 @@ body {
 	@include font-type($main-font, 14px, 20px, 0px);
 	
 	/* сглаживание шрифтов в вебките */
-	-webkit-font-smoothing: subpixel-antialiased;
-			font-smoothing: subpixel-antialiased;
+	// -webkit-font-smoothing: subpixel-antialiased;
+	// 		font-smoothing: subpixel-antialiased;
 }
 
 /* В дополнение от Bootstrap, <p> (параграфы) получают нижний отступ в половину калькулируемой высоты строки (изначально 10px) */
