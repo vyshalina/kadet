@@ -124,8 +124,7 @@ $(document).ready(function() {
     $('.header-right').click(function(e){
         e.preventDefault();
 
-        $('.app').removeClass('active');
-        $('body').addClass('ov-hidden');
+        $('.app').addClass('active2');
 
         // linking delay
         var locHref = $(this).attr('href');
@@ -170,7 +169,6 @@ $(document).ready(function() {
         e.preventDefault();
 
         $('.app').addClass('active2');
-        $('body').addClass('ov-hidden');
 
         // linking delay
         var locHref = $(this).attr('href');

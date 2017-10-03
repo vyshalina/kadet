@@ -395,15 +395,14 @@ h2.two-color {
   .header-right {
     text-align: center;
     position: fixed;
-    left: 100%;
+    right: 0;
     top: 0;
     width: 200px;
     height: 100%;
     z-index: 400;
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
-    background: rgba(102, 102, 102, 0.42); }
+    background: rgba(102, 102, 102, 0.42);
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out; }
     .header-right .return {
       color: #fff;
       font-family: "FedraSansPro-Demi", sans-serif;
@@ -2430,7 +2429,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .app {
   width: 1903px;
   background: #ffffff;
-  overflow-x: hidden;
+  overflow: hidden;
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease; }
   .app .content {
@@ -2493,9 +2492,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-transform: none;
       transform: none; }
     .app.main-article.active2 {
-      -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-      transform: translateY(-100%); }
+      opacity: 0; }
   .app.active {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
