@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $Intro;
 }
 p {
-	@include font-type($FedraSansPBk, 14px, 29px, 1px); color: #666;
+	@include font-type($FedraSansPBk, 16px, 29px, 1px); color: #666;
 	
 }
 
