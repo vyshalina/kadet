@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: "FedraSansPro-Book", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 29px;
   letter-spacing: 1px;
   color: #666; }
@@ -514,7 +514,16 @@ h2.two-color {
   -ms-flex-align: center;
   align-items: center;
   padding: 55px 0 55px 85px;
-  position: relative; }
+  width: -webkit-calc(100% - 85px);
+  width: calc(100% - 85px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #ffffff; }
+  .header-main.relative {
+    width: auto;
+    position: relative; }
   .header-main h1 {
     font-size: 36px;
     letter-spacing: 0.5px;
@@ -781,7 +790,7 @@ article.img {
   float: left;
   width: 1920px;
   height: 810px;
-  padding: 55px 0 35px 0; }
+  padding: 235px 0 35px 0; }
   .albom .iteam-title {
     display: -webkit-box;
     display: -webkit-flex;
@@ -867,7 +876,7 @@ article.img {
   width: -webkit-calc(100% - 80px);
   width: calc(100% - 80px);
   height: auto;
-  padding: 0 0 35px 50px; }
+  padding: 180px 0 35px 50px; }
   .gallery .iteam {
     position: relative;
     margin: 25px; }
@@ -894,7 +903,7 @@ article.img {
   -webkit-justify-content: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  padding-top: 50px; }
+  padding-top: 230px; }
   .gallery-modern .iteam {
     display: -webkit-box;
     display: -webkit-flex;
