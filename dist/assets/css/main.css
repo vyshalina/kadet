@@ -179,6 +179,9 @@ h2.two-color {
 .ov-hidden {
   overflow: hidden; }
 
+.w-1920 {
+  width: 1920px !important; }
+
 /*********************************/
 /*********** Corousel *************/
 /*********************************/
@@ -527,10 +530,12 @@ h2.two-color {
       margin: 5px auto;
       background: #000; }
 
-.owl-carousel .owl-item img {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto !important; }
+.owl-carousel .owl-item {
+  height: 450px; }
+  .owl-carousel .owl-item img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto !important; }
 
 .content p {
   width: 830px; }
@@ -2415,7 +2420,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   transition: left 1s cubic-bezier(0, 0, 0.25, 1) 0s, opacity 0.1s ease 0s; }
 
 .app {
-  width: 1900px;
+  width: 1904px;
   background: #ffffff;
   overflow-x: hidden;
   -webkit-transition: all 1.2s ease;

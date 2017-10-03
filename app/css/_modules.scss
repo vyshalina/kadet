@@ -57,6 +57,10 @@ h2 {
 	overflow: hidden;
 }
 
+.w-1920 {
+	width: 1920px !important;
+}
+
 /*********************************/
 /*********** Corousel *************/
 /*********************************/
@@ -388,7 +392,10 @@ h2 {
 
 .owl-carousel {
 	.owl-item {
-		img {max-height: 100%; max-width: 100%; width: auto!important;}
+		height: 450px;
+		img {
+			max-height: 100%; max-width: 100%; width: auto!important;
+		}
 	}
 }
 
