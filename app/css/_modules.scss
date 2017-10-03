@@ -376,7 +376,11 @@ h2 {
 	position: relative;
 	h1 {
 		font-size: 36px; letter-spacing: 0.5px; text-transform: uppercase;
-		margin-left: 40px;
+		position: relative; left: -70px;
+	}
+
+	a.logo {
+		opacity: 0; pointer-events: none;
 	}
 
 	a.burger {

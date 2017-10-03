@@ -118,7 +118,7 @@ $(document).ready(function() {
         var locHref = $(this).attr('href');
         setTimeout(function(){
             window.location.href = locHref; 
-        },600);
+        },300);
     });
 
     $('.header-right').click(function(e){
@@ -131,7 +131,7 @@ $(document).ready(function() {
         var locHref = $(this).attr('href');
         setTimeout(function(){
             window.location.href = locHref; 
-        },1200);
+        },600);
     });
 
     $('.js-sidebar-menu-btn').click(function(){
@@ -152,7 +152,7 @@ $(document).ready(function() {
         var locHref = $(this).attr('href');
         setTimeout(function(){
             window.location.href = locHref; 
-        },600);
+        },300);
     });
 
     // gallery item fade

@@ -513,7 +513,11 @@ h2.two-color {
     font-size: 36px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-left: 40px; }
+    position: relative;
+    left: -70px; }
+  .header-main a.logo {
+    opacity: 0;
+    pointer-events: none; }
   .header-main a.burger {
     display: block;
     width: 60px;
@@ -2423,8 +2427,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   width: 1902px;
   background: #ffffff;
   overflow-x: hidden;
-  -webkit-transition: all 1.2s ease;
-  transition: all 1.2s ease; }
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease; }
   .app .content {
     width: 1024px;
     margin: 0 auto; }
@@ -2432,14 +2436,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-top: 100px; }
   .app .header-main,
   .app .preview-nav {
-    -webkit-transition: all .6s ease;
-    transition: all .6s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0); }
   .app .preview-wrapp .iteam {
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -2474,8 +2478,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       transition: 0.3s ease; }
   .app .header:after {
     opacity: 0;
-    -webkit-transition: 2s 1.2s ease;
-    transition: 2s 1.2s ease; }
+    -webkit-transition: 2s 0.6s ease;
+    transition: 2s 0.6s ease; }
   .app.main-article {
     -webkit-transform: translateY(100%);
     -ms-transform: translateY(100%);
