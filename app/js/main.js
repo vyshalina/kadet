@@ -174,7 +174,7 @@ $(document).ready(function() {
         var locHref = $(this).attr('href');
         setTimeout(function(){
             window.location.href = locHref; 
-        },1200);
+        },600);
     });
 
     // back arrow
@@ -701,5 +701,5 @@ $(window).on('load', function() {
 
     setTimeout(function() {
         $('body').removeClass('ov-hidden');
-    },1200);
+    },600);
 });

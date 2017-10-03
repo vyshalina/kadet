@@ -277,7 +277,12 @@ h2 {
 		text-align: center;
 		position: fixed; right: 0; top: 0; width: 200px; height: 100%; z-index: 400;
 		background: rgba(102, 102, 102, 0.42);
-		transition: 0.3s ease-out;
+		transition: 0.3s .8s ease-out;
+		opacity: 0;
+
+		.active & {
+			opacity: 1;
+		}
 
 		.return {
 			color: #fff; @include font-type($FedraSansPD, 14px, 21px, 0.7px); text-transform: uppercase;

@@ -401,8 +401,11 @@ h2.two-color {
     height: 100%;
     z-index: 400;
     background: rgba(102, 102, 102, 0.42);
-    -webkit-transition: 0.3s ease-out;
-    transition: 0.3s ease-out; }
+    -webkit-transition: 0.3s .8s ease-out;
+    transition: 0.3s .8s ease-out;
+    opacity: 0; }
+    .active .header-right {
+      opacity: 1; }
     .header-right .return {
       color: #fff;
       font-family: "FedraSansPro-Demi", sans-serif;
