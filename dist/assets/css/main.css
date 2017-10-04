@@ -903,7 +903,7 @@ article.img {
   -webkit-justify-content: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  padding-top: 230px; }
+  padding-top: 50px; }
   .gallery-modern .iteam {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1004,7 +1004,7 @@ article.img {
           opacity: 1;
           pointer-events: all; }
     .video-show-body {
-      width: 1042px;
+      width: 1442px;
       height: auto;
       margin: 0 auto; }
       .video-show-body p {
@@ -1082,6 +1082,10 @@ article.img {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     /* video caption css */
     /*** VIDEO CONTROLS CSS ***/
     /* control holder */
@@ -1098,13 +1102,12 @@ article.img {
       z-index: 6;
       pointer-events: none; }
     .videoContainer video {
-      width: 100%;
+      width: 1042px;
       height: 722px; }
     .videoContainer .caption {
-      position: absolute;
-      top: 30px;
-      left: 50px;
-      width: 885px;
+      width: 400px;
+      display: block !important;
+      opacity: 1 !important;
       font-family: "FedraSansPro-Demi",sans-serif;
       font-weight: 100;
       color: #fff;
@@ -1114,7 +1117,7 @@ article.img {
       text-align: left;
       text-transform: uppercase;
       line-height: 24px;
-      padding: 20px 30px;
+      padding: 40px 15px 40px 40px;
       background: rgba(0, 0, 0, 0.4);
       -webkit-border-radius: 2px 2px 0 0;
       border-radius: 2px 2px 0 0;
