@@ -1,88 +1,99 @@
 $(document).ready(function() {
 
-    var previewCount = 0;
+    var currentSect = 0;
     $('.js-next_1').click(function(e) {
         e.preventDefault();
-        previewCount = 1;
-        $('.preview').animate({
-            'right' : "1920px"
-        });
+        currentSect = 1;
+        $('#swipe').css("transform","translate(-1920px, 0px)");
     });
 
     $('.js-next_2').click(function(e) {
         e.preventDefault();
-        previewCount = 2;
-        $('.preview').animate({
-            'right' : "3840px"
-        });
+        currentSect = 2;
+        $('#swipe').css("transform","translate(-3840px, 0px)");
     });
 
     $('.js-next_3').click(function(e) {
         e.preventDefault();
-        previewCount = 3;
-        $('.preview').animate({
-            'right' : "5760px"
-        });
+        currentSect = 3;
+        $('#swipe').css("transform","translate(-5760px, 0px)");
     });
 
     $('.js-prev_1').click(function(e) {
         e.preventDefault();
-        previewCount = 0;
-        $('.preview').animate({
-            'right' : "0"
-        });
+        currentSect = 0;
+        $('#swipe').css("transform","translate(0px, 0px)");
     });
 
     $('.js-prev_2').click(function(e) {
         e.preventDefault();
-        previewCount = 1;
-        $('.preview').animate({
-            'right' : "1920px"
-        });
+        currentSect = 1;
+        $('#swipe').css("transform","translate(-1920px, 0px)");
     });
 
     $('.js-prev_3').click(function(e) {
         e.preventDefault();
-        previewCount = 2;
-        $('.preview').animate({
-            'right' : "3840px"
-        });
+        currentSect = 2;
+        $('#swipe').css("transform","translate(-3840px, 0px)");
     });
-    $('.preview').swipe({
-        swipe: function (event, direction) {
-            if (direction === 'left' && previewCount == 0) {
-                $('.preview').animate({
-                    'right' : "1920px"
-                });
-                previewCount++;
-            } else if (direction === 'left' && previewCount == 1) {
-                $('.preview').animate({
-                    'right' : "3840px"
-                });
-                previewCount++;
-            // } else if (direction === 'left' && previewCount == 2) {
-            //     $('.preview').animate({
-            //         'right' : "5760px"
-            //     });
-            //     previewCount++;
-            } else if (direction === 'right' && previewCount == 3) {
-                $('.preview').animate({
-                    'right' : "3840px"
-                });
-                previewCount--;
-            } else if (direction === 'right' && previewCount == 2) {
-                $('.preview').animate({
-                    'right' : "1920px"
-                });
-                previewCount--;
-            } else if (direction === 'right' && previewCount == 1) {
-                $('.preview').animate({
-                    'right' : "0px"
-                });
-                previewCount--;
+
+    // swipe
+    function swipeStatus(event, phase, direction, distance) {
+        if (phase == "move" && (direction == "left" || direction == "right")) {
+            var duration = 0;
+
+            if (direction == "left") {
+                scrollSect((SECT_WIDTH * currentSect) + distance, duration);
+            } else if (direction == "right") {
+                scrollSect((SECT_WIDTH * currentSect) - distance, duration);
+            }
+
+        } else if (phase == "cancel") {
+            scrollSect(SECT_WIDTH * currentSect, speed);
+        } else if (phase == "end") {
+            if (direction == "right") {
+                previousSect();
+            } else if (direction == "left") {
+                nextSect();
             }
         }
+    }
+
+    function previousSect() {
+        currentSect = Math.max(currentSect - 1, 0);
+        scrollSect(SECT_WIDTH * currentSect, speed);
+    }
+
+    function nextSect() {
+        currentSect = Math.min(currentSect + 1, maxSect - 1);
+        scrollSect(SECT_WIDTH * currentSect, speed);
+    }
+    function scrollSect(distance, duration) {
+        sect.css("transition-duration", (duration / 1000).toFixed(1) + "s");
+
+        var value = (distance < 0 ? "" : "-") + Math.abs(distance).toString();
+        sect.css("transform", "translate(" + value + "px,0)");
+    }
+
+    var SECT_WIDTH = 1920;
+    var maxSect = 3;
+    var speed = 500;
+
+    var sect;
+
+    var swipeOptions = {
+        triggerOnTouchEnd: true,
+        swipeStatus: swipeStatus,
+        allowPageScroll: "vertical",
+        threshold: 75
+    };
+
+    $(function () {
+        sect = $("#swipe");
+        sect.swipe(swipeOptions);
     });
+
+
 
 
     var owl = $('.owl-carousel');
@@ -107,7 +118,7 @@ $(document).ready(function() {
     }); 
 
 
-    $('.preview-wrapp a.iteam, .gallery-modern .iteam .iteam-title span, .albom .iteam').click(function(e) {
+    $('.preview-wrapp a.iteam, .gallery-modern a, .albom .iteam, .header-main h1 a').click(function(e) {
         e.preventDefault();
 
         $(this).addClass('active');
@@ -156,7 +167,7 @@ $(document).ready(function() {
 
     // gallery item fade
     var galleryLength = $('.gallery .iteam').length,
-        albomLength = $('.albom .iteam').length;
+    albomLength = $('.albom .iteam').length;
     for(i=0;i<galleryLength;i++) {
         $('.gallery .iteam').eq(i).css('transition-delay', i/10 + 's');
     }
@@ -212,21 +223,21 @@ $(document).ready(function() {
         var video = $('.js-video li').eq(index).find('video');
         
         //remove default control when JS loaded
-        video[0].removeAttribute("controls");
+        // video[0].removeAttribute("controls");
         $('.js-video li').eq(index).find('.control').fadeIn(500);
         $('.js-video li').eq(index).find('.caption').fadeIn(500);
-     
+
         //before everything get started
         video.on('loadedmetadata', function() {
-                
+
             //set video properties
             $('.js-video li').eq(index).find('.current').text(timeFormat(0));
             $('.js-video li').eq(index).find('.duration').text(timeFormat(video[0].duration));
             updateVolume(0, 0.7);
-                
+
             //start to get video buffering data 
             setTimeout(startBuffer, 150);
-                
+
             //bind video events
             $('.js-video li').eq(index).find('.videoContainer')
             .hover(function() {
@@ -251,7 +262,7 @@ $(document).ready(function() {
             var maxduration = video[0].duration;
             var perc = 100 * currentBuffer / maxduration;
             $('.js-video li').eq(index).find('.bufferBar').css('width',perc+'%');
-                
+
             if(currentBuffer < maxduration) {
                 setTimeout(startBuffer, 500);
             }
@@ -450,21 +461,21 @@ $(document).ready(function() {
     var video = $('.myVideo');
     
     //remove default control when JS loaded
-    video[0].removeAttribute("controls");
+    // video[0].removeAttribute("controls");
     $('.control').fadeIn(500);
     $('.caption').fadeIn(500);
- 
+
     //before everything get started
     video.on('loadedmetadata', function() {
-            
+
         //set video properties
         $('.current').text(timeFormat(0));
         $('.duration').text(timeFormat(video[0].duration));
         updateVolume(0, 0.7);
-            
+
         //start to get video buffering data 
         setTimeout(startBuffer, 150);
-            
+
         //bind video events
         $('.videoContainer')
         .hover(function() {
@@ -489,7 +500,7 @@ $(document).ready(function() {
         var maxduration = video[0].duration;
         var perc = 100 * currentBuffer / maxduration;
         $('.bufferBar').css('width',perc+'%');
-            
+
         if(currentBuffer < maxduration) {
             setTimeout(startBuffer, 500);
         }

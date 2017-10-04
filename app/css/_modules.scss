@@ -387,6 +387,9 @@ h2 {
 	h1 {
 		font-size: 36px; letter-spacing: 0.5px; text-transform: uppercase;
 		position: relative; left: -70px;
+		a {
+			color: #262626;
+		}
 	}
 
 	a.logo {
@@ -415,6 +418,7 @@ h2 {
 
 .content {
 	p {
+		font-size: 16px;
 		width: 830px;
 	}
 	h3 {
@@ -496,7 +500,11 @@ article {
 
 // PREVIEW PAGES
 .preview {
-	position: relative; width: 10000px;
+	position: relative; width: 1920px; overflow: hidden;
+	#swipe {
+		width: 5760px; float: left; display: inline; padding: 0; margin: 0;
+		transition-property: transform; transition-duration: 0.5s; transition-timing-function: ease-out; transform: translate(0, 0);
+	}
 	&-wrapp {
 		display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between;  width: 1920px; height: 900px; float: left;
 
@@ -563,7 +571,7 @@ article {
 	}
 	.iteam {
 		position: relative; width: 360px; height: 215px; margin: 0 50px 0 70px;
-		background: #d5262d;
+		background: rgb(89, 89, 89);
 		figure {
 			position: absolute; width: 360px; height: 215px; left: -25px; top: -45px;
 			.blackout {
@@ -640,7 +648,7 @@ article {
 		.iteam-title {
 			display: flex; justify-content: space-around; align-items: center;
 			width: 100%; height: 150px;
-			background: #e3303a;
+			background: rgb(89, 89, 89);
 
 			p {
 				color: #fff; font-size: 34px; font-family: $Intro; text-transform: uppercase; line-height: 40px;
@@ -648,13 +656,13 @@ article {
 			}
 
 			span {
-				@include font-type($FedraSansPD, 12px,20px, 1px); text-transform: uppercase; color: #e3303a;  
+				@include font-type($FedraSansPD, 12px,20px, 1px); text-transform: uppercase; color: rgb(89, 89, 89);  
 				padding: 10px 30px;
 				background: #fff; border: 2px solid #fff;
 				transition: all 0.4s ease;
 				&:hover {
 					color: #fff;
-					background: #e3303a;
+					background: rgb(89, 89, 89);
 				}
 			}
 		}
@@ -711,9 +719,9 @@ article {
 
 					.title {
 						color: rgba(255,255,255,1);
-						background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
+						background: rgb(89, 89, 89); 
 						span {
-							background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
+							background: rgb(89, 89, 89); 
 						}
 					}
 				}
