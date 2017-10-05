@@ -624,6 +624,59 @@ article {
 			img {width: auto; max-width: 210px; height: 210px;}
 		}
 	}
+
+	&-height {
+		&-1 {
+			.iteam {
+				height: 160px; width: 210px; position: relative;
+				box-shadow: 15px 15px 0px 0 rgba(0, 0, 0, 0.65);
+				overflow: hidden;
+				img {
+					box-shadow: none; 
+				}
+			}
+		}
+		&-2 {
+			.iteam {
+				height: 145px;
+				box-shadow: 15px 15px 0px 0 rgba(0, 0, 0, 0.65);
+				overflow: hidden;
+				img {
+					box-shadow: none; 
+				}
+			}
+		}
+		&-3 {
+			.iteam {
+				height: 185px;
+				box-shadow: 15px 15px 0px 0 rgba(0, 0, 0, 0.65);
+				overflow: hidden;
+				img {
+					box-shadow: none; 
+				}
+			}
+		}
+		&-4 {
+			.iteam {
+				max-height: 130px;
+				box-shadow: 15px 15px 0px 0 rgba(0, 0, 0, 0.65);
+				overflow: hidden;
+				img {
+					box-shadow: none; 
+				}
+			}
+		}
+		&-5 {
+			.iteam {
+				max-height: 128px;
+				box-shadow: 15px 15px 0px 0 rgba(0, 0, 0, 0.65);
+				overflow: hidden;
+				img {
+					box-shadow: none; 
+				}
+			}
+		}
+	}
 }
 
 //GALLERY-MODERN
@@ -768,7 +821,7 @@ article {
 
 		/* video caption css */
 		.caption{
-			width:400px; display: block !important; opacity: 1 !important;
+			width:345px; display: block !important; opacity: 1 !important;
 			
 			font-family: "FedraSansPro-Demi",sans-serif; font-weight: 100; color: #fff; font-size: 14px; padding: 20px; margin-bottom: 0; text-align: left; text-transform: uppercase; line-height: 24px;
 			

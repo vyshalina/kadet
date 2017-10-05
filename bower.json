@@ -22,6 +22,7 @@
     "lg-thumbnail": "^1.1.0",
     "lightgallery": "^1.6.0",
     "jquery-touchswipe": "^1.6.18",
-    "jquery": "2.2.4"
+    "jquery": "2.2.4",
+    "mediaelement": "^4.2.6"
   }
 }
