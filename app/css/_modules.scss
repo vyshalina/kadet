@@ -1011,3 +1011,26 @@ article {
 		}
 	}
 }
+
+.mejs__ {
+	&controls {
+		height: 50px !important;
+	}
+	&button {
+		&.mejs__fullscreen-button,
+		&.mejs__playpause-button {
+			transform: scale(2.3);
+		}
+	}
+	&time {
+		span {
+			font-size: 16px;
+		}
+	}
+	&currenttime-container {
+		padding: 16px 6px 0 25px !important;
+	}
+	&duration-container {
+		padding: 16px 25px 0 6px !important;
+	}
+}

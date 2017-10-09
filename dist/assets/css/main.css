@@ -1373,6 +1373,23 @@ article.img {
       background-image: url(../img/sprite.png);
       background-position: 0px -128px; }
 
+.mejs__controls {
+  height: 50px !important; }
+
+.mejs__button.mejs__fullscreen-button, .mejs__button.mejs__playpause-button {
+  -webkit-transform: scale(2.3);
+  -ms-transform: scale(2.3);
+  transform: scale(2.3); }
+
+.mejs__time span {
+  font-size: 16px; }
+
+.mejs__currenttime-container {
+  padding: 16px 6px 0 25px !important; }
+
+.mejs__duration-container {
+  padding: 16px 25px 0 6px !important; }
+
 /*
 Icon classes can be used entirely standalone. They are named after their original file names.
 
