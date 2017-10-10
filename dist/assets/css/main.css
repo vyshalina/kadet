@@ -378,8 +378,8 @@ h2.two-color {
     height: 100%;
     position: relative;
     z-index: 12;
-    background: -webkit-linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%);
-    background: linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%); }
+    background: -webkit-linear-gradient(45deg, rgba(203, 205, 18, 0.89) 0%, rgba(203, 198, 18, 0.89) 100%);
+    background: linear-gradient(45deg, rgba(203, 205, 18, 0.89) 0%, rgba(203, 198, 18, 0.89) 100%); }
     .header-left .epaulet {
       width: 255px;
       height: 571px;
@@ -625,7 +625,7 @@ article.img {
       height: 7px;
       display: inline-block;
       margin-left: 15px;
-      background: #d42c33; }
+      background: #cbcd12; }
   article.img p {
     width: auto; }
   article.img.one {
@@ -725,8 +725,8 @@ article.img {
         padding: 13px 20px 30px 20px;
         width: 332px;
         height: 35px;
-        background: -webkit-linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%);
-        background: linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%); }
+        background: -webkit-linear-gradient(45deg, rgba(203, 205, 18, 0.89) 0%, rgba(203, 198, 18, 0.89) 100%);
+        background: linear-gradient(45deg, rgba(203, 205, 18, 0.89) 0%, rgba(203, 198, 18, 0.89) 100%); }
         .preview-wrapp .iteam .preview-title p {
           font-family: "FedraSansPro-Demi", sans-serif;
           font-size: 12px;
@@ -1318,8 +1318,8 @@ article.img {
           left: 2;
           background: #fff; }
       .footer-preview-cont.red-bg {
-        background: -webkit-linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%);
-        background: linear-gradient(45deg, rgba(223, 23, 34, 0.89) 0%, rgba(205, 18, 25, 0.89) 100%); }
+        background: -webkit-linear-gradient(45deg, rgba(203, 205, 18, 0.89) 0%, rgba(203, 198, 18, 0.89) 100%);
+        background: linear-gradient(45deg, rgba(203, 205, 18, 0.89) 0%, rgba(203, 198, 18, 0.89) 100%); }
 
 .lg-toolbar .lg-close::after {
   content: ' ' !important; }

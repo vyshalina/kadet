@@ -259,7 +259,7 @@ h2 {
 	&-left {
 		float: left;
 		width: 700px; height: 100%; position: relative; z-index: 12;
-		background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
+		background: linear-gradient(45deg, rgba(203,205,18,0.89) 0%,rgba(203,198,18,0.89) 100%); 
 
 		.epaulet {
 			width: 255px; height: 571px; padding: 50px 0 0 85px;
@@ -459,7 +459,7 @@ article {
 			&:after {
 				content: '';
 				width: 20px; height: 7px; display: inline-block; margin-left: 15px;
-				background: #d42c33;
+				background: #cbcd12;
 			}
 		}
 		p {
@@ -521,7 +521,7 @@ article {
 			.preview-title {
 
 				position: absolute; left: 0; bottom: 0; padding: 13px 20px 30px 20px; width: 332px; height: 35px;
-				background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
+				background: linear-gradient(45deg, rgba(203,205,18,0.89) 0%,rgba(203,198,18,0.89) 100%); 
 				
 				p {
 					@include font-type($FedraSansPD, 12px, 18px, 0.5px); color: #fff; text-transform: uppercase;
@@ -962,7 +962,7 @@ article {
 				}
 			}
 			&.red-bg {
-				background: linear-gradient(45deg, rgba(223,23,34,0.89) 0%,rgba(205,18,25,0.89) 100%); 
+				background: linear-gradient(45deg, rgba(203,205,18,0.89) 0%,rgba(203,198,18,0.89) 100%); 
 			}
 		}
 	}
