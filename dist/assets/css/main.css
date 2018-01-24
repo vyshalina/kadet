@@ -3111,6 +3111,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .mejs__overlay-error > img {
   left: 0;
+  max-width: 100%;
   position: absolute;
   top: 0;
   z-index: -1; }
